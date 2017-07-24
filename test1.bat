@@ -1,0 +1,1 @@
+tclsh C:/waveauto6101/automation/bin/vw_auto.tcl -f gws_vw.tcl
