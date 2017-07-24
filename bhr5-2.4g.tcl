@@ -47,12 +47,12 @@ keylset global_config WirelessGroupCount 1
 #Tests - you may define more than one in a TCL list.
 
 keylset global_config TestList {
-    24g-lan-udp-dn-1c
+  24g-lan-udp-dn-1c
 	24g-lan-udp-dn-25c
 	24g-lan-udp-up-1c
 	24g-lan-udp-up-25c
 	24g-lan-udp-bidir-1c
-	24g-lan-udp-bidir-25c	
+	24g-lan-udp-bidir-25c
 	24g-wan-udp-dn-1c
 	24g-wan-udp-dn-25c
 	24g-wan-udp-up-1c
@@ -70,10 +70,10 @@ keylset global_config TestList {
 	24g-wan-tcp-bidir-1c
 	24g-wan-tcp-dn-25c
 	24g-wan-tcp-up-25c
-	24g-wan-tcp-bidir-25c	
+	24g-wan-tcp-bidir-25c
 }
 
-# 24g-lan-udp-dn-1c  
+# 24g-lan-udp-dn-1c
 # 24g-lan-udp-dn-25c
 # 24g-lan-udp-up-1c
 # 24g-lan-udp-up-25c
@@ -87,7 +87,7 @@ keylset global_config TestList {
 # 24g-wan-udp-bidir-1c
 # 24g-wan-udp-bidir-25c
 #
-# 24g-lan-tcp-dn-1c 
+# 24g-lan-tcp-dn-1c
 # 24g-lan-tcp-up-1c
 # 24g-lan-tcp-bidir-1c
 # 24g-lan-tcp-dn-25c
@@ -277,6 +277,46 @@ set RF1-NoHiperf {
 	{ BehindNAT 				False				}
 }
 
+set RF1-NoHiperf-BehindNAT {
+    { GroupType                 802.11ac			}
+    { Ssid                      $ssid	          	}
+    { Dut                       GWS-AP24-NoHiperf	    	}
+    { Method                    WPA2-PSK    		}
+    { Channel                   $ch 				}
+    { PskAscii                  $psk    			}
+    { GuardInterval             short				}
+    { ChannelModel              Bypass				}
+	{ TxPower                   6    				}
+    { GratuitousArp             True				}
+    { Dhcp                      Disable				}
+    { BaseIp                    192.168.1.12		}
+    { IncrIp                    0.0.0.1				}
+    { SubnetMask                255.255.255.0		}
+    { Gateway                   192.168.1.1			}
+    { KeepAlive                 True                }
+    { phyInterface              802.11n             }
+    { NumSpatialStreams         4                   }
+    { EnableLDPC                False               }
+    { MgmtPhyRate               24                  }
+    { Qos                       Disable             }
+    { MacAddress                None                }
+    { PlcpConfiguration         mixed               }
+    { EnableAMSDUrxaggregation  True                }
+    { EnableAMPDUaggregation    True                }
+    { EnableAMSDUtxaggregation  False               }
+    { EnableValidateCertificate off                 }
+    { DuplicateControlFrames    False				}
+    { EnableMuSuMimo 			False				}
+    { MimoMode 					mu-mimo				}
+	{ USManagementMcs 			11					}
+    { NumClients                1					}
+	{ DataMcsIndex              23                  }
+	{ ChannelBandwidth          40                  }
+	{ NumTxAntennas             4                   }
+	{ BehindNAT 				True				}
+}
+
+
 set RF25 {
     { GroupType                 802.11ac			}
     { Ssid                      $ssid	          	}
@@ -396,10 +436,49 @@ set RF25-NoHiperf {
 	{ BehindNAT 				False				}
 }
 
+set RF25-NoHiperf-BehindNAT {
+    { GroupType                 802.11ac			}
+    { Ssid                      $ssid	          	}
+    { Dut                       GWS-AP24-NoHiperf			}
+    { Method                    WPA2-PSK    		}
+    { Channel                   $ch 				}
+    { PskAscii                  $psk    			}
+    { GuardInterval             short				}
+    { ChannelModel              Bypass				}
+	{ TxPower                   6    				}
+    { GratuitousArp             True				}
+    { Dhcp                      Disable				}
+    { BaseIp                    192.168.1.12		}
+    { IncrIp                    0.0.0.1				}
+    { SubnetMask                255.255.255.0		}
+    { Gateway                   192.168.1.1			}
+    { KeepAlive                 True                }
+    { phyInterface              802.11n             }
+    { NumSpatialStreams         4                   }
+    { EnableLDPC                False               }
+    { MgmtPhyRate               24                  }
+    { Qos                       Disable             }
+    { MacAddress                None                }
+    { PlcpConfiguration         vht_mixed           }
+    { EnableAMSDUrxaggregation  True                }
+    { EnableAMPDUaggregation    True                }
+    { EnableAMSDUtxaggregation  False               }
+    { EnableValidateCertificate off                 }
+    { DuplicateControlFrames    False				}
+    { EnableMuSuMimo 			False				}
+    { MimoMode 					mu-mimo				}
+	{ USManagementMcs 			11					}
+    { NumClients                25					}
+	{ DataMcsIndex              23                  }
+	{ ChannelBandwidth          40                  }
+	{ NumTxAntennas             4                   }
+	{ BehindNAT 				True				}
+}
+
+
+
 #unicast_unidirectional_throughput Options
-# {1518}
-
-
+# {64 88 128 256 512 1024 1280 1518}
 
 set 24g-lan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
@@ -655,7 +734,7 @@ set 24g-wan-udp-bidir-25c {
 
 
 #tcp_goodput Options  =======================================================
-# {1460} 
+# {1460}
 
 set 24g-lan-tcp-dn-1c {
     { Test                      tcp_goodput         }
