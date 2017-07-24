@@ -51,7 +51,7 @@ keylset global_config TestList {
 	wfb-24g-lan-udp-up-1c
 	wfb-24g-lan-udp-up-25c
 	wfb-24g-lan-udp-bidir-1c
-	wfb-24g-lan-udp-bidir-25c	
+	wfb-24g-lan-udp-bidir-25c
 	wfb-24g-wan-udp-dn-1c
 	wfb-24g-wan-udp-dn-25c
 	wfb-24g-wan-udp-up-1c
@@ -70,7 +70,7 @@ keylset global_config TestList {
 	wfb-24g-wan-tcp-dn-25c-1s
 	wfb-24g-wan-tcp-up-25c-1s
 	wfb-24g-wan-tcp-bidir-25c-1s
-	
+
 }
 
 # wfb-24g-lan-udp-dn-1c  - no error - need full run
@@ -294,11 +294,12 @@ set RF25-NoHiperf {
 }
 
 #unicast_unidirectional_throughput Options
+# {64 88 128 256 512 1024 1280 1518}
 
 set wfb-24g-lan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port2}             				}
     { Destination               {RF1}               				}
     { Direction                 {Unidirectional}    				}
@@ -319,7 +320,7 @@ set wfb-24g-lan-udp-dn-1c {
 set wfb-24g-lan-udp-dn-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port2}             				}
     { Destination               {RF25}               				}
     { Direction                 {Unidirectional}    				}
@@ -339,7 +340,7 @@ set wfb-24g-lan-udp-dn-25c {
 set wfb-24g-lan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF1}             					}
     { Destination               {port2}               		}
     { Direction                 {Unidirectional}    				}
@@ -360,7 +361,7 @@ set wfb-24g-lan-udp-up-1c {
 set wfb-24g-lan-udp-up-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF25}             					}
     { Destination               {port2}               				}
     { Direction                 {Unidirectional}    				}
@@ -381,7 +382,7 @@ set wfb-24g-lan-udp-up-25c {
 set wfb-24g-lan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF1}             					}
     { Destination               {port2}               		}
     { Direction                 {Bidirectional}    				}
@@ -402,7 +403,7 @@ set wfb-24g-lan-udp-bidir-1c {
 set wfb-24g-lan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF25}             					}
     { Destination               {port2}               				}
     { Direction                 {Bidirectional}    				}
@@ -425,7 +426,7 @@ set wfb-24g-lan-udp-bidir-25c {
 set wfb-24g-wan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port1}             				}
     { Destination               {RF1}               				}
     { Direction                 {Unidirectional}    				}
@@ -446,7 +447,7 @@ set wfb-24g-wan-udp-dn-1c {
 set wfb-24g-wan-udp-dn-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port1}             				}
     { Destination               {RF25}               				}
     { Direction                 {Unidirectional}    				}
@@ -466,7 +467,7 @@ set wfb-24g-wan-udp-dn-25c {
 set wfb-24g-wan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF1}             					}
     { Destination               {port1}               		}
     { Direction                 {Unidirectional}    				}
@@ -487,7 +488,7 @@ set wfb-24g-wan-udp-up-1c {
 set wfb-24g-wan-udp-up-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF25}             					}
     { Destination               {port1}               				}
     { Direction                 {Unidirectional}    				}
@@ -508,7 +509,7 @@ set wfb-24g-wan-udp-up-25c {
 set wfb-24g-wan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF1}             					}
     { Destination               {port1}                   		}
     { Direction                 {Bidirectional}    				}
@@ -529,7 +530,7 @@ set wfb-24g-wan-udp-bidir-1c {
 set wfb-24g-wan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF25}             					}
     { Destination               {port1}               				}
     { Direction                 {Bidirectional}    				}
