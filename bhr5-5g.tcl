@@ -43,48 +43,48 @@ keylset global_config WirelessGroupCount 1
 
 #Tests - you may define more than one in a TCL list.
 keylset global_config TestList {
-	wan_tcp_goodput_up_1client
-	wan_tcp_goodput_up_25client
+	5g-wan-tcp-up-1c
+	5g-wan-tcp-up-25c
 	wan_tcp_goodput_bidir_1client
-	wan_tcp_goodput_bidir_25client
-	
+	5g-wan-tcp-bidir-25c
+
 }
 
-# lan_udp_throughput_down_1client
+# 5g-lan-udp-dn-1c
 # lan_udp_throughput_down_25client
-# lan_udp_throughput_up_1client
+# 5g-lan-udp-up-1c
 # lan_udp_throughput_up_25client
-# lan_udp_throughput_bidir_1client
-# lan_udp_throughput_bidir_25client
+# 5g-lan-udp-bidir-1c
+# 5g-lan-udp-bidir-25c
 #
 # wan_udp_throughput_down_1client
-# wan_udp_throughput_down_25client
-# wan_udp_throughput_up_1client
-# wan_udp_throughput_up_25client
+# 5g-wan-udp-dn-25c
+# 5g-wan-udp-up-1c
+# 5g-wan-udp-up-25c
 # wan_udp_throughput_bidir_1client
 # wan_udp_throughput_bidir_25client
 #
-# lan_tcp_goodput_down_1client_1session
+# 5g-lan-tcp-dn-1c
 # lan_tcp_goodput_down_1client_2session
 # lan_tcp_goodput_down_1client_5session
 # lan_tcp_goodput_down_1client_10session
-# lan_tcp_goodput_down_25client_1session
+# 5g-lan-tcp-dn-25c
 # lan_tcp_goodput_down_25client_2session
 # lan_tcp_goodput_down_25client_5session
 # lan_tcp_goodput_down_25client_10session
 #
-# wan_tcp_goodput_down_1client_1session
-# wan_tcp_goodput_down_1client_2session
-# wan_tcp_goodput_down_1client_5session
-# wan_tcp_goodput_down_1client_10session
-# wan_tcp_goodput_down_25client_1session
-# wan_tcp_goodput_down_25client_2session
-# wan_tcp_goodput_down_25client_5session
-# wan_tcp_goodput_down_25client_10session
-# wan_tcp_goodput_up_1client
-# wan_tcp_goodput_up_25client
+# 5g-wan-tcp-dn-1c_1session
+# 5g-wan-tcp-dn-1c_2session
+# 5g-wan-tcp-dn-1c_5session
+# 5g-wan-tcp-dn-1c_10session
+# 5g-wan-tcp-dn-25c_1session
+# 5g-wan-tcp-dn-25c_2session
+# 5g-wan-tcp-dn-25c_5session
+# 5g-wan-tcp-dn-25c_10session
+# 5g-wan-tcp-up-1c
+# 5g-wan-tcp-up-25c
 # wan_tcp_goodput_bidir_1client
-# wan_tcp_goodput_bidir_25client
+# 5g-wan-tcp-bidir-25c
 
 # tcp_goodput_up
 # tcp_goodput_bidir
@@ -388,10 +388,10 @@ set RF25-BehindNAT {
 	{ BehindNAT 				True				}
 }
 
-set RF25-Nohiperf {
+set RF25-NoHiperf {
     { GroupType                 802.11ac			}
     { Ssid                      $ssid	          	}
-    { Dut                       GWS-AP5-Nohiperf	}
+    { Dut                       GWS-AP5-NoHiperf	}
     { Method                    WPA2-PSK    		}
     { Channel                   $ch 				}
     { PskAscii                  $psk    			}
@@ -427,7 +427,7 @@ set RF25-Nohiperf {
 	{ BehindNAT 				False				}
 }
 
-set RF25-Nohiperf-BehindNAT {
+set RF25-NoHiperf-BehindNAT {
     { GroupType                 802.11ac			}
     { Ssid                      $ssid	          	}
     { Dut                       GWS-AP5-Nohiperf	}
@@ -467,11 +467,12 @@ set RF25-Nohiperf-BehindNAT {
 }
 
 # UDP =============================================================
+# {64 88 128 256 512 1024 1280 1518}
 
-set lan_udp_throughput_down_1client {
+set 5g-lan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port1 port2}             				}
     { Destination               {RF1}               				}
     { Direction                 {Unidirectional}    				}
@@ -488,10 +489,10 @@ set lan_udp_throughput_down_1client {
     { SourcePort                45001                				}
 }
 
-set lan_udp_throughput_down_25client {
+set 5g-lan-udp-dn-25c{
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           }
+    { FrameSizeList             {1518}                           }
     { Source                    {port2}             				}
     { Destination               {RF25}               				}
     { Direction                 {Unidirectional}    				}
@@ -507,10 +508,10 @@ set lan_udp_throughput_down_25client {
     { SourcePort                45001                				}
 }
 
-set lan_udp_throughput_up_1client {
+set 5g-lan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF1}             					}
     { Destination               {port1 port2}               		}
     { Direction                 {Unidirectional}    				}
@@ -527,10 +528,10 @@ set lan_udp_throughput_up_1client {
     { SourcePort                45001                				}
 }
 
-set lan_udp_throughput_up_25client {
+set 5g-lan-udp-up-25c{
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}                           	}
+    { FrameSizeList             {1518}                           	}
     { Source                    {RF25}             					}
     { Destination               {port2}               				}
     { Direction                 {Unidirectional}    				}
@@ -547,10 +548,10 @@ set lan_udp_throughput_up_25client {
     { SourcePort                45001                				}
 }
 
-set lan_udp_throughput_bidir_1client {
+set 5g-lan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {RF1-NoHiperf}        				}
     { Destination               {port1 port2}               		}
     { Direction                 {Bidirectional}    					}
@@ -567,10 +568,10 @@ set lan_udp_throughput_bidir_1client {
     { SourcePort                45001                				}
 }
 
-set lan_udp_throughput_bidir_25client {
+set 5g-lan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {RF25-NoHiperf}            			}
     { Destination               {port2}               				}
     { Direction                 {Bidirectional}    					}
@@ -587,10 +588,10 @@ set lan_udp_throughput_bidir_25client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_down_1client {
+set 5g-wan-udp-dn-1c{
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {port1-wan}            				}
     { Destination               {RF1-BehindNAT}        				}
     { Direction                 {Unidirectional}    				}
@@ -607,10 +608,10 @@ set wan_udp_throughput_down_1client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_down_25client {
+set 5g-wan-udp-dn-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {port1-wan}             			}
     { Destination               {RF25-BehindNAT}               		}
     { Direction                 {Unidirectional}    				}
@@ -626,10 +627,10 @@ set wan_udp_throughput_down_25client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_up_1client {
+set 5g-wan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {RF1-wan}             				}
     { Destination               {port1-BehindNAT}      				}
     { Direction                 {Unidirectional}    				}
@@ -646,10 +647,10 @@ set wan_udp_throughput_up_1client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_up_25client {
+set 5g-wan-udp-up-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {RF25-BehindNAT}       				}
     { Destination               {port1-wan}            				}
     { Direction                 {Unidirectional}    				}
@@ -666,10 +667,10 @@ set wan_udp_throughput_up_25client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_bidir_1client {
+set 5g-wan-udp-bidir-1c{
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}  }
+    { FrameSizeList             {1518}  }
     { Source                    {RF1-NoHiperf-BehindNAT}  			}
     { Destination               {port1-wan}                			}
     { Direction                 {Bidirectional}    					}
@@ -686,10 +687,10 @@ set wan_udp_throughput_bidir_1client {
     { SourcePort                45001                				}
 }
 
-set wan_udp_throughput_bidir_25client {
+set 5g-wan-udp-bidir-25c{
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                              }
-    { FrameSizeList             {64 88 128 256 512 1024 1280 1518}	}
+    { FrameSizeList             {1518}	}
     { Source                    {RF25-NoHiperf-BehindNAT}     		}
     { Destination               {port1-wan}               			}
     { Direction                 {Bidirectional}    					}
@@ -710,7 +711,7 @@ set wan_udp_throughput_bidir_25client {
 #TCP  =====================================
 # ================
 
-set lan_tcp_goodput_down_1client_1session {
+set 5g-lan-tcp-dn-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -727,13 +728,13 @@ set lan_tcp_goodput_down_1client_1session {
 	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_1client_2session {
+set 5g-lan-tcp-up-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port1 port2}     	}
-    { Destination               {RF1}               }
+    { Source                    {RF1}
+    { Destination               {port1 port2}                }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
@@ -741,44 +742,27 @@ set lan_tcp_goodput_down_1client_2session {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
 	{ TrialDuration				30   				}
-	{ NumOfSessionPerClient     2                   }
+	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_1client_5session {
+set 5g-lan-tcp-bidir-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port1 port2}     	}
-    { Destination               {RF1}               }
-    { Direction                 {Unidirectional}    }
+    { Source                    {RF1}
+    { Destination               {port1 port2}                }
+    { Direction                 {Bidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
 	{ TrialDuration				30   				}
-	{ NumOfSessionPerClient     5                   }
+	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_1client_10session {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {port1 port2}     	}
-    { Destination               {RF1}               }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	{ TrialDuration				30   				}
-	{ NumOfSessionPerClient     10                  }
-}
-
-set lan_tcp_goodput_down_25client_1session {
+set 5g-lan-tcp-dn-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152           }
@@ -794,57 +778,44 @@ set lan_tcp_goodput_down_25client_1session {
 	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_25client_2session {
+set 5g-lan-tcp-up-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}        		}
-    { Destination               {RF25}              }
+    { Source                    {RF25}
+    { Destination               {port2}                }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     2                   }
+	{ TrialDuration				30   				}
+	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_25client_5session {
+set 5g-lan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}        		}
-    { Destination               {RF25}              }
-    { Direction                 {Unidirectional}    }
+    { Source                    {RF25}
+    { Destination               {port2}                }
+    { Direction                 {Bidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     5                   }
+	{ TrialDuration				30   				}
+	{ NumOfSessionPerClient     1                   }
 }
 
-set lan_tcp_goodput_down_25client_10session {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {port2}        		}
-    { Destination               {RF25}              }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     10                  }
-}
 
 # TCP WAN
 
-set wan_tcp_goodput_down_1client {
+set 5g-wan-tcp-dn-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -862,7 +833,7 @@ set wan_tcp_goodput_down_1client {
 }
 
 
-set wan_tcp_goodput_down_25client {
+set 5g-wan-tcp-dn-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -881,7 +852,7 @@ set wan_tcp_goodput_down_25client {
 
 
 
-set wan_tcp_goodput_up_1client {
+set 5g-wan-tcp-up-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -898,7 +869,7 @@ set wan_tcp_goodput_up_1client {
 }
 
 
-set wan_tcp_goodput_up_25client {
+set 5g-wan-tcp-up-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -918,7 +889,7 @@ set wan_tcp_goodput_up_25client {
 
 
 
-set wan_tcp_goodput_bidir_1client {
+set 5g-wan-tcp-bidir-1c{
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -936,7 +907,7 @@ set wan_tcp_goodput_bidir_1client {
 }
 
 
-set wan_tcp_goodput_bidir_25client {
+set 5g-wan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
@@ -957,59 +928,8 @@ set wan_tcp_goodput_bidir_25client {
 
 
 
-
-
-
-
-
-set lan_tcp_goodput_down_25client {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {port2}     	    }
-    { Destination               {RF25}              }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-}
-
-set tcp_goodput_up {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {RF1}               }
-    { Destination               {port1 port2}	    }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-}
-
-set tcp_goodput_bidir {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {port1 port2}  	    }
-    { Destination               {RF1-NoHiperf}      }
-    { Direction                 {Bidirectional}     }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-}
-
-
 #Port list for port specific options
-keylset global_config Ports {GWS-AP5 Eth2 Eth1}
+keylset global_config Ports {GWS-AP5 GWS-AP5-NoHiperf Eth2 Eth1}
 
 #Generic Dut Definitions
 
