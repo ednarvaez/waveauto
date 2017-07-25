@@ -106,7 +106,7 @@ set port1 {
     { Dut                       Eth1                }
     { Hops                      -1                  }
     { MacAddressMode            Increment           }
-    { GratuitousArp              True               }
+    { GratuitousArp             True                }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   192.168.1.1         }
 		{ SubnetMask                255.255.255.0       }
