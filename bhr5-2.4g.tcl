@@ -489,7 +489,7 @@ set 24g-lan-udp-dn-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -510,7 +510,7 @@ set 24g-lan-udp-dn-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { DestinationPort           46002                				}
     { SourcePort                45001                				}
@@ -530,7 +530,7 @@ set 24g-lan-udp-up-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -551,7 +551,7 @@ set 24g-lan-udp-up-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -572,7 +572,7 @@ set 24g-lan-udp-bidir-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -593,7 +593,7 @@ set 24g-lan-udp-bidir-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -616,7 +616,7 @@ set 24g-wan-udp-dn-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -637,7 +637,7 @@ set 24g-wan-udp-dn-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { DestinationPort           46002                				}
     { SourcePort                45001                				}
@@ -657,7 +657,7 @@ set 24g-wan-udp-up-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -678,7 +678,7 @@ set 24g-wan-udp-up-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -699,7 +699,7 @@ set 24g-wan-udp-bidir-1c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
@@ -720,7 +720,7 @@ set 24g-wan-udp-bidir-25c {
     { MaxSearchValue            150%                        }
     { Mode                      Percent                     }
     { StartValue                10%                         }
-    { AcceptableThroughput      80                          }
+    { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
     { PayloadData               None                				}
     { DestinationPort           46002                				}
