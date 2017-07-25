@@ -60,16 +60,16 @@ keylset global_config TestList {
 	24g-wan-udp-bidir-1c
 	24g-wan-udp-bidir-25c
 	24g-lan-tcp-dn-1c
+  24g-lan-tcp-dn-25c
 	24g-lan-tcp-up-1c
+  24g-lan-tcp-up-25c
 	24g-lan-tcp-bidir-1c
-	24g-lan-tcp-dn-25c
-	24g-lan-tcp-up-25c
 	24g-lan-tcp-bidir-25c
 	24g-wan-tcp-dn-1c
+  24g-wan-tcp-dn-25c
 	24g-wan-tcp-up-1c
+  24g-wan-tcp-up-25c
 	24g-wan-tcp-bidir-1c
-	24g-wan-tcp-dn-25c
-	24g-wan-tcp-up-25c
 	24g-wan-tcp-bidir-25c
 }
 
@@ -88,17 +88,17 @@ keylset global_config TestList {
 # 24g-wan-udp-bidir-25c
 #
 # 24g-lan-tcp-dn-1c
-# 24g-lan-tcp-up-1c
-# 24g-lan-tcp-bidir-1c
 # 24g-lan-tcp-dn-25c
+# 24g-lan-tcp-up-1c
 # 24g-lan-tcp-up-25c
+# 24g-lan-tcp-bidir-1c
 # 24g-lan-tcp-bidir-25c
 #
 # 24g-wan-tcp-dn-1c
-# 24g-wan-tcp-up-1c
-# 24g-wan-tcp-bidir-1c
 # 24g-wan-tcp-dn-25c
+# 24g-wan-tcp-up-1c
 # 24g-wan-tcp-up-25c
+# 24g-wan-tcp-bidir-1c
 # 24g-wan-tcp-bidir-25c
 
 #Group Eth1 - Client Options
@@ -395,8 +395,6 @@ set RF25-BehindNAT {
 	  { BehindNAT 			        	True		         		}
 }
 
-
-
 set RF25-NoHiperf {
     { GroupType                 802.11ac			      }
     { Ssid                      $ssid	             	}
@@ -474,8 +472,6 @@ set RF25-NoHiperf-BehindNAT {
 	  { NumTxAntennas             4                   }
 	  { BehindNAT 				       True		          		}
 }
-
-
 
 #unicast_unidirectional_throughput Options
 # {64 88 128 256 512 1024 1280 1518}
@@ -567,7 +563,7 @@ set 24g-lan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                    	}
-    { Source                    {RF1}             					}
+    { Source                    {RF1-NoHiperf}     					}
     { Destination               {port2}               		  }
     { Direction                 {Bidirectional}    				  }
     { TrafficType               Udp                 			 	}
@@ -588,7 +584,7 @@ set 24g-lan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                    	}
-    { Source                    {RF25}             					}
+    { Source                    {RF25-NoHiperf}    					}
     { Destination               {port2}               	   	}
     { Direction                 {Bidirectional}    				  }
     { TrafficType               Udp                 				}
@@ -694,7 +690,7 @@ set 24g-wan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                    	}
-    { Source                    {RF1-BehindNAT}      				}
+    { Source                    {RF1-NoHiperf-BehindNAT}    }
     { Destination               {port1-wan}             		}
     { Direction                 {Bidirectional}    		 	   	}
     { TrafficType               Udp                 		  	}
@@ -715,7 +711,7 @@ set 24g-wan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                     	}
-    { Source                    {RF25-BehindNAT}   					}
+    { Source                    {RF25-NoHiperf-BehindNAT}  	}
     { Destination               {port1-wan}          				}
     { Direction                 {Bidirectional}      				}
     { TrafficType               Udp                 				}
@@ -734,13 +730,13 @@ set 24g-wan-udp-bidir-25c {
 
 
 #tcp_goodput Options  =======================================================
-# {1460}
+# {536 1460}
 
 set 24g-lan-tcp-dn-1c {
     { Test                      tcp_goodput                 }
     { FrameSizeList             {1460}                      }
     { TcpWindowSize             2097152                     }
-     { AcceptableGoodput         0                          }
+    { AcceptableGoodput         0                           }
     { Source                    {port2}     		            }
     { Destination               {RF1}                       }
     { Direction                 {Unidirectional}            }
@@ -751,6 +747,23 @@ set 24g-lan-tcp-dn-1c {
     { FlowType                  TCP                         }
 	  { TrialDuration	       			5                   				}
 	  { NumOfSessionPerClient     {1 2 5 10}                  }
+}
+
+set 24g-lan-tcp-dn-25c {
+    { Test                      tcp_goodput         }
+    { FrameSizeList             {1460}              }
+    { TcpWindowSize             2097152             }
+    { AcceptableGoodput         0                   }
+    { Source                    {port2}     	      }
+    { Destination               {RF25}              }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Tcp                 }
+    { PayloadData               None                }
+    { DestinationPort           1024                }
+    { SourcePort                1024                }
+    { FlowType                  TCP                 }
+    { TrialDuration	       			5              			}
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 24g-lan-tcp-up-1c {
@@ -771,41 +784,6 @@ set 24g-lan-tcp-up-1c {
 	  { AcceptableGoodput         0                   }
 }
 
-set 24g-lan-tcp-bidir-1c {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
-    { Source                    {port2}         		}
-    { Destination               {RF1}               }
-    { Direction                 {Bidirectional}     }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	  { TrialDuration				      5   	         			}
-	  { NumOfSessionPerClient     {1 2 5 10}          }
-	  { AcceptableGoodput         0                   }
-}
-
-set 24g-lan-tcp-dn-25c {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
-    { Source                    {port2}     	      }
-    { Destination               {RF25}              }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-    { TrialDuration	       			5              			}
-    { NumOfSessionPerClient     {1 2 5 10}          }
-}
-
 set 24g-lan-tcp-up-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {1460}              }
@@ -823,12 +801,31 @@ set 24g-lan-tcp-up-25c {
 	  { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
+set 24g-lan-tcp-bidir-1c {
+    { Test                      tcp_goodput         }
+    { FrameSizeList             {1460}              }
+    { TcpWindowSize             2097152             }
+    { AcceptableGoodput         0                   }
+    { Source                    {port2}         		}
+    { Destination               {RF1-NoHiperf}      }
+    { Direction                 {Bidirectional}     }
+    { TrafficType               Tcp                 }
+    { PayloadData               None                }
+    { DestinationPort           1024                }
+    { SourcePort                1024                }
+    { FlowType                  TCP                 }
+	  { TrialDuration				      5   	         			}
+	  { NumOfSessionPerClient     {1 2 5 10}          }
+	  { AcceptableGoodput         0                   }
+}
+
+
 set 24g-lan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {1460}              }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {RF25}            	}
+    { Source                    {RF25-NoHiperf}    	}
     { Destination               {port2}             }
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
@@ -860,6 +857,22 @@ set 24g-wan-tcp-dn-1c {
 	  { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
+set 24g-wan-tcp-dn-25c {
+    { Test                      tcp_goodput         }
+    { FrameSizeList             {1460}              }
+    { TcpWindowSize             2097152             }
+    { AcceptableGoodput         0                   }
+    { Source                    {port1-wan}        	}
+    { Destination               {RF25-BehindNAT}    }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Tcp                 }
+    { PayloadData               None                }
+    { DestinationPort           1024                }
+    { SourcePort                1024                }
+    { FlowType                  TCP                 }
+	  { NumOfSessionPerClient     {1 2 5 10}          }
+}
+
 set 24g-wan-tcp-up-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {1460}              }
@@ -874,39 +887,6 @@ set 24g-wan-tcp-up-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
 	  { TrialDuration				      5           				}
-	  { NumOfSessionPerClient     {1 2 5 10}          }
-}
-
-set 24g-wan-tcp-bidir-1c {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
-    { Source                    {RF1-BehindNAT}     }
-    { Destination               {port1-wan}         }
-    { Direction                 {Bidirectional}     }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	  { TrialDuration			       	5           				}
-	  { NumOfSessionPerClient     {1 2 5 10}          }
-}
-
-set 24g-wan-tcp-dn-25c {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         80                  }
-    { Source                    {port1-wan}        	}
-    { Destination               {RF25-BehindNAT}    }
-    { Direction                 {Unidirectional}    }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
 	  { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
@@ -926,20 +906,38 @@ set 24g-wan-tcp-up-25c {
 	  { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
+set 24g-wan-tcp-bidir-1c {
+    { Test                      tcp_goodput                 }
+    { FrameSizeList             {1460}                      }
+    { TcpWindowSize             2097152                     }
+    { AcceptableGoodput         0                           }
+    { Source                    {RF1-NoHiperf-BehindNAT}    }
+    { Destination               {port1-wan}                 }
+    { Direction                 {Bidirectional}             }
+    { TrafficType               Tcp                         }
+    { PayloadData               None                        }
+    { DestinationPort           1024                        }
+    { SourcePort                1024                        }
+    { FlowType                  TCP                         }
+	  { TrialDuration			       	5           				        }
+	  { NumOfSessionPerClient     {1 2 5 10}                  }
+}
+
+
 set 24g-wan-tcp-bidir-25c {
-    { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
-    { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
-    { Source                    {RF25-BehindNAT}  	}
-    { Destination               {port1-wan}         }
-    { Direction                 {Bidirectional}     }
-    { TrafficType               Tcp                 }
-    { PayloadData               None                }
-    { DestinationPort           1024                }
-    { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	   { NumOfSessionPerClient     {1 2 5 10}         }
+    { Test                      tcp_goodput                 }
+    { FrameSizeList             {1460}                      }
+    { TcpWindowSize             2097152                     }
+    { AcceptableGoodput         0                           }
+    { Source                    {RF25-NoHiperf-BehindNAT}  	}
+    { Destination               {port1-wan}                 }
+    { Direction                 {Bidirectional}             }
+    { TrafficType               Tcp                         }
+    { PayloadData               None                        }
+    { DestinationPort           1024                        }
+    { SourcePort                1024                        }
+    { FlowType                  TCP                         }
+	   { NumOfSessionPerClient     {1 2 5 10}                 }
 }
 
 
