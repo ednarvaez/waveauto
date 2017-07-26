@@ -167,7 +167,7 @@ set RF1 {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False			        	}
     { EnableMuSuMimo 			      False		         		}
@@ -205,7 +205,7 @@ set RF1-NoHiperf {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False			        	}
@@ -243,7 +243,7 @@ set RF25 {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False			        	}
     { EnableMuSuMimo 			      False			        	}
@@ -281,7 +281,7 @@ set RF25-NoHiperf {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False				        }
