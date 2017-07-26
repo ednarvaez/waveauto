@@ -186,7 +186,7 @@ set RF1 {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False	              }
@@ -225,7 +225,7 @@ set RF1-BehindNAT {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False		         		}
@@ -264,7 +264,7 @@ set RF1-NoHiperf {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False	        			}
@@ -303,7 +303,7 @@ set RF1-NoHiperf-BehindNAT {
     { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False	        			}
@@ -343,7 +343,7 @@ set RF25 {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 		       	False	         			}
@@ -382,7 +382,7 @@ set RF25-BehindNAT {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False			        	}
@@ -421,7 +421,7 @@ set RF25-NoHiperf {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False				        }
     { EnableMuSuMimo 			      False		         		}
@@ -460,7 +460,7 @@ set RF25-NoHiperf-BehindNAT {
     { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
-    { EnableAMSDUtxaggregation  False               }
+    { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
     { DuplicateControlFrames    False			          }
     { EnableMuSuMimo 			      False		            }
@@ -767,12 +767,12 @@ set 24g-lan-tcp-dn-25c {
 }
 
 set 24g-lan-tcp-up-1c {
-    { Test                      tcp_goodput                }
-    { FrameSizeList             {1460}                     }
-    { TcpWindowSize             2097152                    }
-     { AcceptableGoodput         0                         }
-    { Source                    {RF1}     	               }
-    { Destination               {port2}                    }
+    { Test                      tcp_goodput         }
+    { FrameSizeList             {536 1460}          }
+    { TcpWindowSize             2097152             }
+    { AcceptableGoodput         0                   }
+    { Source                    {RF1}     	        }
+    { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
