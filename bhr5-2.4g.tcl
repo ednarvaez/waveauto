@@ -179,7 +179,7 @@ set RF1 {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -218,7 +218,7 @@ set RF1-BehindNAT {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -257,7 +257,7 @@ set RF1-NoHiperf {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -296,7 +296,7 @@ set RF1-NoHiperf-BehindNAT {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -336,7 +336,7 @@ set RF25 {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -375,7 +375,7 @@ set RF25-BehindNAT {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -414,7 +414,7 @@ set RF25-NoHiperf {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -453,7 +453,7 @@ set RF25-NoHiperf-BehindNAT {
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
-    { EnableLDPC                False               }
+    { EnableLDPC                True                }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
@@ -470,7 +470,7 @@ set RF25-NoHiperf-BehindNAT {
     { DataMcsIndex              23                  }
 	  { ChannelBandwidth          40                  }
 	  { NumTxAntennas             4                   }
-	  { BehindNAT 				       True		          		}
+	  { BehindNAT 				        True		         		}
 }
 
 #unicast_unidirectional_throughput Options
