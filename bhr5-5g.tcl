@@ -733,7 +733,7 @@ set 5g-wan-udp-bidir-25c {
 
 set 5g-lan-tcp-dn-1c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {port1 port2}       }
@@ -750,7 +750,7 @@ set 5g-lan-tcp-dn-1c {
 
 set 5g-lan-tcp-dn-25c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152    	        }
     { AcceptableGoodput         0                   }
     { Source                    {port2}         		}
@@ -767,7 +767,7 @@ set 5g-lan-tcp-dn-25c {
 
 set 5g-lan-tcp-up-1c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF1}								}
@@ -784,7 +784,7 @@ set 5g-lan-tcp-up-1c {
 
 set 5g-lan-tcp-up-25c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF25} 							}
@@ -801,7 +801,7 @@ set 5g-lan-tcp-up-25c {
 
 set 5g-lan-tcp-bidir-1c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF1-NoHiperf}  		}
@@ -819,7 +819,7 @@ set 5g-lan-tcp-bidir-1c {
 
 set 5g-lan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF25-NoHiperf}			}
@@ -839,7 +839,7 @@ set 5g-lan-tcp-bidir-25c {
 
 set 5g-wan-tcp-dn-1c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {port1-wan}   	    }
@@ -857,7 +857,7 @@ set 5g-wan-tcp-dn-1c {
 
 set 5g-wan-tcp-dn-25c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {port1-wan}   	    }
@@ -874,7 +874,7 @@ set 5g-wan-tcp-dn-25c {
 
 set 5g-wan-tcp-up-1c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF1-BehindNAT}     }
@@ -890,7 +890,7 @@ set 5g-wan-tcp-up-1c {
 
 set 5g-wan-tcp-up-25c {
     { Test                      tcp_goodput         }
-    { FrameSizeList             {1460}              }
+    { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF25-BehindNAT}    }
