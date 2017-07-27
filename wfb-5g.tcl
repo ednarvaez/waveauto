@@ -51,24 +51,24 @@ keylset global_config WirelessGroupCount 1
 
 keylset global_config TestList {
 
-	wfb-5g-lan-udp-dn-1c
-	wfb-5g-lan-udp-dn-25c
-	wfb-5g-lan-udp-up-1c
-	wfb-5g-lan-udp-up-25c
-	wfb-5g-lan-udp-bidir-1c
-	wfb-5g-lan-udp-bidir-25c
-	wfb-5g-lan-tcp-bidir-1c-1s
-	wfb-5g-lan-tcp-bidir-25c-1s
-	wfb-5g-lan-tcp-dn-1c-1s
-	wfb-5g-lan-tcp-dn-25c-1s
-	wfb-5g-lan-tcp-up-1c-1s
-	wfb-5g-lan-tcp-up-25c-1s
-	wfb-5g-wan-udp-dn-1c
-	wfb-5g-wan-udp-dn-25c
-	wfb-5g-wan-udp-up-1c
-	wfb-5g-wan-udp-up-25c
-	wfb-5g-wan-udp-bidir-1c
-	wfb-5g-wan-udp-bidir-25c
+    wfb-5g-lan-udp-dn-1c
+    wfb-5g-lan-udp-dn-25c
+    wfb-5g-lan-udp-up-1c
+    wfb-5g-lan-udp-up-25c
+    wfb-5g-lan-udp-bidir-1c
+    wfb-5g-lan-udp-bidir-25c
+    wfb-5g-lan-tcp-bidir-1c-1s
+    wfb-5g-lan-tcp-bidir-25c-1s
+    wfb-5g-lan-tcp-dn-1c-1s
+    wfb-5g-lan-tcp-dn-25c-1s
+    wfb-5g-lan-tcp-up-1c-1s
+    wfb-5g-lan-tcp-up-25c-1s
+    wfb-5g-wan-udp-dn-1c
+    wfb-5g-wan-udp-dn-25c
+    wfb-5g-wan-udp-up-1c
+    wfb-5g-wan-udp-up-25c
+    wfb-5g-wan-udp-bidir-1c
+    wfb-5g-wan-udp-bidir-25c
 
 }
 
@@ -108,18 +108,18 @@ set port1 {
     { Dut                       Eth1                }
     { Hops                      -1                  }
     { MacAddressMode            Increment           }
-    { GratuitousArp             True        	    }
+    { GratuitousArp             True                }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   192.168.1.1         }
-	{ SubnetMask                255.255.255.0       }
+    { SubnetMask                255.255.255.0       }
     { MacAddressIncr            1                   }
     { phyInterface              802.11ag            }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { BaseIp                    192.168.1.10        }
     { Method                    {None}              }
-    { EnableValidateCertificate off					}
-    { NumClients                1					}
+    { EnableValidateCertificate off                 }
+    { NumClients                1                   }
 }
 
 set port2 {
@@ -130,38 +130,38 @@ set port2 {
     { GratuitousArp             True                }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   192.168.1.1         }
-	{ SubnetMask                255.255.255.0       }
+    { SubnetMask                255.255.255.0       }
     { MacAddressIncr            1                   }
     { phyInterface              802.11ag            }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { BaseIp                    192.168.1.10        }
     { Method                    {None}              }
-    { EnableValidateCertificate off					}
-    { NumClients                1					}
+    { EnableValidateCertificate off                 }
+    { NumClients                1                   }
 }
 
 #Group RF - Client Options
 
 set RF1 {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	          	}
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk   				}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-	{ SigBandwidth          	80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -174,33 +174,33 @@ set RF1 {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF1-NoHiperf {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	          	}
-    { Dut                       GWS-AP5-NoHiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          	80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-NoHiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -213,35 +213,35 @@ set RF1-NoHiperf {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 
 
 # ===
 
 set RF25 {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	          	}
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          	80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -254,33 +254,33 @@ set RF25 {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                25                  }
+    { BehindNAT                 False               }
 }
 
 set RF25-NoHiperf {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	     	    }
-    { Dut                       GWS-AP5-NoHiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          	80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-NoHiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -293,12 +293,12 @@ set RF25-NoHiperf {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                25                  }
+    { BehindNAT                 False               }
 }
 
 # UDP =============================================================
@@ -308,254 +308,253 @@ set RF25-NoHiperf {
 
 
 set wfb-5g-lan-udp-dn-1c {
-    { Test 						unicast_unidirectional_throughput   }
-    { Frame						Custom                              }
-    { FrameSizeList				{1518}  							}
-    { Source  			 		{port2}             				}
-    { Destination 				{RF1}               				}
-    { Direction 				{Unidirectional}    				}
-	{ TrafficType 	 			Udp 								}
-	{ SearchResolution 			0.2% 	 							}
-    { MinSearchValue 			1%   	 							}
-    { MaxSearchValue 	 		150% 	 							}
-    { Mode 				 		Percent 							}
-    { StartValue		 		10%  								}
-    { AcceptableThroughput		80  								}
-    { FlowType  				UDP  								}
-    { PayloadData 				None  								}
-    { DestinationPort  			46002 				 				}
-    { SourcePort       			45001 				 				}
-	{ TrialDuration				5   				 				}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {port2}                             }
+    { Destination                  {RF1}                               }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-lan-udp-dn-25c {
-    { Test  					unicast_unidirectional_throughput   }
-    { Frame 					Custom  							}
-    { FrameSizeList 			{1518}  							}
-    { Source					{port2} 							}
-    { Destination  				{RF25}  							}
-	{ Direction					{Unidirectional}					]
-	{ TrafficType 				Udp									}
-    { SearchResolution    		0.2%    							}
-    { MinSearchValue      		1%      							}
-    { MaxSearchValue      		150%    							}
-    { Mode                		Percent 							}
-    { StartValue          		10%     							}
-    { AcceptableThroughput		80      							}
-    { FlowType            		UDP     							}
-    { DestinationPort 			46002   							}
-    { SourcePort  				45001  								}
-	{ TrialDuration				5   							 	}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {port2}                             }
+    { Destination                  {RF25}                              }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-lan-udp-up-1c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom   							}
-    { FrameSizeList             {1518}    						 	}
-    { Source                 	{RF1}             					}
-    { Destination               {port2}               				}
-    { Direction                 {Unidirectional}    				}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%     							}
-    { MinSearchValue            1%       							}
-    { MaxSearchValue            150%     							}
-    { Mode                      Percent  							}
-    { StartValue                10%      							}
-    { AcceptableThroughput      80       							}
-    { FlowType                  UDP      							}
-    { PayloadData               None   								}
-    { DestinationPort           46002   							}
-    { SourcePort                45001   							}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF1}                               }
+    { Destination                  {port2}                             }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 
 set wfb-5g-lan-udp-up-25c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518} 								}
-    { Source                    {RF25}             					}
-    { Destination               {port2}               				}
-    { Direction                 {Unidirectional}    				}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%    							}
-    { MinSearchValue            1%      							}
-    { MaxSearchValue            150%    							}
-    { Mode                      Percent 							}
-    { StartValue                10%     							}
-    { AcceptableThroughput      80      							}
-    { FlowType                  UDP     							}
-    { PayloadData               None   								}
-    { DestinationPort           46002   							}
-    { SourcePort                45001   							}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF25}                              }
+    { Destination                  {port2}                             }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-lan-udp-bidir-1c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518}  							}
-    { Source                    {RF1-NoHiperf} 						}
-    { Destination               {port2}        						}
-    { Direction                 {Bidirectional}    					}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%    							}
-    { MinSearchValue            1%      							}
-    { MaxSearchValue            150%    							}
-    { Mode                      Percent 							}
-    { StartValue                10%     							}
-    { AcceptableThroughput      80      							}
-    { FlowType                  UDP     							}
-    { PayloadData               None                				}
-    { DestinationPort           46002                				}
-    { SourcePort                45001                				}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF1-NoHiperf}                      }
+    { Destination                  {port2}                             }
+    { Direction                    {Bidirectional}                     }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-lan-udp-bidir-25c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList				{1518}  							}
-    { Source                    {RF25-NoHiperf}           		 	}
-    { Destination               {port2}               				}
-    { Direction                 {Bidirectional}    					}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%     							}
-    { MinSearchValue            1%       							}
-    { MaxSearchValue            150%     							}
-    { Mode                      Percent  							}
-    { StartValue                10%      							}
-    { AcceptableThroughput      80       							}
-    { FlowType                  UDP      							}
-    { PayloadData               None                				}
-    { DestinationPort           46002                				}
-    { SourcePort                45001                				}
-	{ TrialDuration				5   				    			}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF25-NoHiperf}                     }
+    { Destination                  {port2}                             }
+    { Direction                    {Bidirectional}                     }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 # == WAN
 
 set wfb-5g-wan-udp-dn-1c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518}                       		}
-    { Source                    {port1}             				}
-    { Destination               {RF1}               				}
-    { Direction                 {Unidirectional}    				}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%    							}
-    { MinSearchValue            1%      							}
-    { MaxSearchValue            150%    							}
-    { Mode                      Percent 							}
-    { StartValue                10%     							}
-    { AcceptableThroughput      80      							}
-    { FlowType                  UDP     							}
-    { PayloadData               None   								}
-    { DestinationPort           46002  				 				}
-    { SourcePort                45001   							}
-	{ TrialDuration				5   								}
+    { Test                        unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {port1}                             }
+    { Destination                  {RF1}                               }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-wan-udp-dn-25c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-	{ FrameSizeList             {1518}  							}
-    { Source                    {port1}           					}
-    { Destination               {RF25}            					}
-    { Direction                 {Unidirectional}  					}
-    { TrafficType               Udp               					}
-    { SearchResolution          0.2%    							}
-    { MinSearchValue            1%      							}
-    { MaxSearchValue            150%    							}
-    { Mode                      Percent 							}
-    { StartValue                10%     							}
-    { AcceptableThroughput      80      							}
-    { FlowType                  UDP     							}
-    { DestinationPort           46002   							}
-    { SourcePort                45001   							}
-	{ TrialDuration				5    								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {port1}                             }
+    { Destination                  {RF25}                              }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-wan-udp-up-1c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518}                 	          	}
-    { Source                    {RF1}           					}
-    { Destination               {port1}               				}
-    { Direction                 {Unidirectional} 					}
-    { TrafficType               Udp              					}
-    { SearchResolution          0.2%    							}
-    { MinSearchValue            1%      							}
-    { MaxSearchValue            150%    							}
-    { Mode                      Percent 							}
-    { StartValue                10%     							}
-    { AcceptableThroughput      80       							}
-    { FlowType                  UDP     							}
-    { PayloadData               None             					}
-    { DestinationPort           46002             					}
-    { SourcePort                45001             					}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF1}                               }
+    { Destination                  {port1}                             }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-wan-udp-up-25c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518}                    	       	}
-    { Source                    {RF25}          					}
-    { Destination               {port1}               				}
-    { Direction                 {Unidirectional}					}
-    { TrafficType               Udp             					}
-    { SearchResolution          0.2%                    			}
-    { MinSearchValue            1%                      			}
-    { MaxSearchValue            150%                    			}
-    { Mode                      Percent                 			}
-    { StartValue                10%                     			}
-    { AcceptableThroughput      80                      			}
-    { FlowType                  UDP                     			}
-    { PayloadData               None    							}
-    { DestinationPort           46002   							}
-    { SourcePort    			45001  								}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF25}                              }
+    { Destination                  {port1}                             }
+    { Direction                    {Unidirectional}                    }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-wan-udp-bidir-1c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList				{1518}  							}
-    { Source                    {RF1-NoHiperf}      			  	}
-    { Destination               {port1}               				}
-    { Direction                 {Bidirectional}    					}
-    { TrafficType               Udp                 				}
-    { SearchResolution          0.2%                                }
-    { MinSearchValue            1%                                  }
-    { MaxSearchValue            150%                                }
-    { Mode                      Percent                             }
-    { StartValue                10%                                 }
-    { AcceptableThroughput      80                                  }
-    { FlowType                  UDP                                 }
-    { PayloadData               None                				}
-    { DestinationPort           46002  								}
-    { SourcePort                45001  								}
-	{ TrialDuration				5   								}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF1-NoHiperf}                      }
+    { Destination                  {port1}                             }
+    { Direction                    {Bidirectional}                     }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 set wfb-5g-wan-udp-bidir-25c {
-    { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom              				}
-    { FrameSizeList             {1518}								}
-    { Source                    {RF25-NoHiperf}    		        	}
-    { Destination               {port1}  							}
-    { Direction          		{Bidirectional}    					}
-    { TrafficType        		Udp                 				}
-    { SearchResolution          0.2%                				}
-    { MinSearchValue            1%                  				}
-    { MaxSearchValue            150%                				}
-    { Mode                      Percent             				}
-    { StartValue                10%                 				}
-    { AcceptableThroughput      80                  				}
-    { FlowType                  UDP                 				}
-    { PayloadData        		None                				}
-    { DestinationPort    		46002                				}
-    { SourcePort         		45001                				}
-	{ TrialDuration				5  					 				}
+    { Test                         unicast_unidirectional_throughput   }
+    { Frame                        Custom                              }
+    { FrameSizeList                {1518}                              }
+    { Source                       {RF25-NoHiperf}                     }
+    { Destination                  {port1}                             }
+    { Direction                    {Bidirectional}                     }
+    { TrafficType                  Udp                                 }
+    { SearchResolution             0.2%                                }
+    { MinSearchValue               1%                                  }
+    { MaxSearchValue               150%                                }
+    { Mode                         Percent                             }
+    { StartValue                   10%                                 }
+    { AcceptableThroughput         80                                  }
+    { FlowType                     UDP                                 }
+    { PayloadData                  None                                }
+    { DestinationPort              46002                               }
+    { SourcePort                   45001                               }
+    { TrialDuration                5                                   }
 }
 
 
@@ -568,7 +567,7 @@ set wfb-5g-lan-tcp-dn-1c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}    			}
+    { Source                    {port2}             }
     { Destination               {RF1}               }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -576,16 +575,16 @@ set wfb-5g-lan-tcp-dn-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-lan-tcp-dn-25c-1s {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152   			}
+    { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}  			}
+    { Source                    {port2}             }
     { Destination               {RF25}              }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -593,7 +592,7 @@ set wfb-5g-lan-tcp-dn-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-lan-tcp-up-1c-1s {
@@ -601,7 +600,7 @@ set wfb-5g-lan-tcp-up-1c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {RF1}     			}
+    { Source                    {RF1}               }
     { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -609,16 +608,16 @@ set wfb-5g-lan-tcp-up-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-lan-tcp-up-25c-1s {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152    			}
+    { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {RF25}    			}
+    { Source                    {RF25}              }
     { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -626,7 +625,7 @@ set wfb-5g-lan-tcp-up-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-lan-tcp-bidir-1c-1s {
@@ -634,7 +633,7 @@ set wfb-5g-lan-tcp-bidir-1c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}  			}
+    { Source                    {port2}             }
     { Destination               {RF1-NoHiperf}      }
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
@@ -642,8 +641,8 @@ set wfb-5g-lan-tcp-bidir-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5   				}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-lan-tcp-bidir-25c-1s {
@@ -651,7 +650,7 @@ set wfb-5g-lan-tcp-bidir-25c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port2}        	  	}
+    { Source                    {port2}             }
     { Destination               {RF25-NoHiperf}     }
     { Direction                 {bidirectional}     }
     { TrafficType               Tcp                 }
@@ -659,7 +658,7 @@ set wfb-5g-lan-tcp-bidir-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 # == WAN
@@ -677,16 +676,16 @@ set wfb-5g-wan-tcp-dn-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5					}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-wan-tcp-dn-25c-1s {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152  			}
+    { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port1} 			}
+    { Source                    {port1}             }
     { Destination               {RF25}              }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -694,7 +693,7 @@ set wfb-5g-wan-tcp-dn-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                  	}
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-wan-tcp-up-1c-1s {
@@ -702,7 +701,7 @@ set wfb-5g-wan-tcp-up-1c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {RF1} 				}
+    { Source                    {RF1}               }
     { Destination               {port1}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -710,16 +709,16 @@ set wfb-5g-wan-tcp-up-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5   				}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-wan-tcp-up-25c-1s {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152    			}
+    { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {RF25}    			}
+    { Source                    {RF25}              }
     { Destination               {port1}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -727,7 +726,7 @@ set wfb-5g-wan-tcp-up-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-wan-tcp-bidir-1c-1s {
@@ -735,7 +734,7 @@ set wfb-5g-wan-tcp-bidir-1c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port1}  			}
+    { Source                    {port1}             }
     { Destination               {RF1}               }
     { Direction                 {bidirectional}     }
     { TrafficType               Tcp                 }
@@ -743,8 +742,8 @@ set wfb-5g-wan-tcp-bidir-1c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     1                   }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 set wfb-5g-wan-tcp-bidir-25c-1s {
@@ -752,7 +751,7 @@ set wfb-5g-wan-tcp-bidir-25c-1s {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         80                  }
-    { Source                    {port1}    		    }
+    { Source                    {port1}             }
     { Destination               {RF25}              }
     { Direction                 {bidirectional}     }
     { TrafficType               Tcp                 }
@@ -760,7 +759,7 @@ set wfb-5g-wan-tcp-bidir-25c-1s {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ NumOfSessionPerClient     1                   }
+    { NumOfSessionPerClient     1                   }
 }
 
 

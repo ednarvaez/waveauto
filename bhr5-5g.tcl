@@ -45,30 +45,30 @@ keylset global_config WirelessGroupCount 1
 #Tests - you may define more than one in a TCL list.
 keylset global_config TestList {
 
-	5g-lan-udp-dn-1c
-	5g-lan-udp-dn-25c
-	5g-lan-udp-up-1c
-	5g-lan-udp-up-25c
-	5g-lan-udp-bidir-1c
-	5g-lan-udp-bidir-25c
-	5g-wan-udp-dn-1c
-	5g-wan-udp-dn-25c
-	5g-wan-udp-up-1c
-	5g-wan-udp-up-25c
-	5g-wan-udp-bidir-1c
-	5g-wan-udp-bidir-25c
-	5g-lan-tcp-dn-1c
-	5g-lan-tcp-dn-25c
-	5g-lan-tcp-up-1c
-	5g-lan-tcp-up-25c
-	5g-lan-tcp-bidir-1c
-	5g-lan-tcp-bidir-25c
-	5g-wan-tcp-dn-1c
-	5g-wan-tcp-dn-25c
-	5g-wan-tcp-up-1c
-	5g-wan-tcp-up-25c
-	5g-wan-tcp-bidir-1c
-	5g-wan-tcp-bidir-25c
+    5g-lan-udp-dn-1c
+    5g-lan-udp-dn-25c
+    5g-lan-udp-up-1c
+    5g-lan-udp-up-25c
+    5g-lan-udp-bidir-1c
+    5g-lan-udp-bidir-25c
+    5g-wan-udp-dn-1c
+    5g-wan-udp-dn-25c
+    5g-wan-udp-up-1c
+    5g-wan-udp-up-25c
+    5g-wan-udp-bidir-1c
+    5g-wan-udp-bidir-25c
+    5g-lan-tcp-dn-1c
+    5g-lan-tcp-dn-25c
+    5g-lan-tcp-up-1c
+    5g-lan-tcp-up-25c
+    5g-lan-tcp-bidir-1c
+    5g-lan-tcp-bidir-25c
+    5g-wan-tcp-dn-1c
+    5g-wan-tcp-dn-25c
+    5g-wan-tcp-up-1c
+    5g-wan-tcp-up-25c
+    5g-wan-tcp-bidir-1c
+    5g-wan-tcp-bidir-25c
 
 }
 
@@ -110,15 +110,15 @@ set port1 {
     { GratuitousArp             True                }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   192.168.1.1         }
-	{ SubnetMask                255.255.255.0       }
+    { SubnetMask                255.255.255.0       }
     { MacAddressIncr            1                   }
     { phyInterface              802.11ag            }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { BaseIp                    192.168.1.10        }
     { Method                    {None}              }
-    { EnableValidateCertificate off					}
-    { NumClients                1					}
+    { EnableValidateCertificate off                 }
+    { NumClients                1                   }
 }
 
 set port1-wan {
@@ -129,15 +129,15 @@ set port1-wan {
     { GratuitousArp             True                }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   10.0.0.1            }
-	{ SubnetMask                255.0.0.0           }
+    { SubnetMask                255.0.0.0           }
     { MacAddressIncr            1                   }
     { phyInterface              802.11ag            }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { BaseIp                    10.0.0.10           }
     { Method                    {None}              }
-    { EnableValidateCertificate off					}
-    { NumClients                1					}
+    { EnableValidateCertificate off                 }
+    { NumClients                1                   }
 }
 
 
@@ -149,38 +149,38 @@ set port2 {
     { GratuitousArp              True               }
     { MacAddress                a0:00:00:00:00:01   }
     { Gateway                   192.168.1.1         }
-	{ SubnetMask                255.255.255.0       }
+    { SubnetMask                255.255.255.0       }
     { MacAddressIncr            1                   }
     { phyInterface              802.11ag            }
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { BaseIp                    192.168.1.10        }
     { Method                    {None}              }
-    { EnableValidateCertificate off					}
-    { NumClients                1					}
+    { EnableValidateCertificate off                 }
+    { NumClients                1                   }
 }
 
 #Group RF - Client Options
 
 set RF1 {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	       		}
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK  			}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          		80     			}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6   				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth                  80              }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -193,33 +193,33 @@ set RF1 {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF1-BehindNAT {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	      	    }
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK   			}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth         		80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -232,33 +232,33 @@ set RF1-BehindNAT {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				True				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 True                }
 }
 
 set RF1-NoHiperf {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	     		}
-    { Dut                       GWS-AP5-NoHiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth      	    80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6  				  	}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-NoHiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -271,33 +271,33 @@ set RF1-NoHiperf {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF1-NoHiperf-BehindNAT {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	      	    }
-    { Dut                       GWS-AP5-NoHiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          	80	     			}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-NoHiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                9                   }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -310,34 +310,34 @@ set RF1-NoHiperf-BehindNAT {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                1					}
-	{ BehindNAT 				True				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 
 set RF25 {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	     		}
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK   			}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth       		80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                 9                  }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth               80                 }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -350,33 +350,33 @@ set RF25 {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF25-BehindNAT {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	      	    }
-    { Dut                       GWS-AP5				}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth          	80   			  	}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5             }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                 9                  }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -389,33 +389,33 @@ set RF25-BehindNAT {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				True				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF25-NoHiperf {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	       		}
-    { Dut                       GWS-AP5-NoHiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth      	    80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-NoHiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                 9                  }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth              80                  }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -428,33 +428,33 @@ set RF25-NoHiperf {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				False				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 set RF25-NoHiperf-BehindNAT {
-    { GroupType                 802.11ac			}
-    { Ssid                      $ssid	       		}
-    { Dut                       GWS-AP5-Nohiperf	}
-    { Method                    WPA2-PSK    		}
-    { Channel                   $ch 				}
-    { PskAscii                  $psk    			}
-	{ VhtDataMcs 				9					}
-	{ USDataMcs 				9					}
-    { GuardInterval             short				}
-    { SigBandwidth       		80     				}
-    { ChannelModel              Bypass				}
-	{ TxPower                   6    				}
-    { GratuitousArp             True				}
-    { Dhcp                      Disable				}
-    { BaseIp                    192.168.1.12		}
-    { IncrIp                    0.0.0.1				}
-    { SubnetMask                255.255.255.0		}
-    { Gateway                   192.168.1.1			}
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP5-Nohiperf    }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { VhtDataMcs                 9                  }
+    { USDataMcs                 9                   }
+    { GuardInterval             short               }
+    { SigBandwidth               80                 }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11ac            }
     { NumSpatialStreams         4                   }
@@ -467,12 +467,12 @@ set RF25-NoHiperf-BehindNAT {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False				}
-    { EnableMuSuMimo 			False				}
-    { MimoMode 					mu-mimo				}
-	{ USManagementMcs 			11					}
-    { NumClients                25					}
-	{ BehindNAT 				True				}
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { BehindNAT                 False               }
 }
 
 # UDP =============================================================
@@ -480,250 +480,250 @@ set RF25-NoHiperf-BehindNAT {
 
 set 5g-lan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom         		}
-    { FrameSizeList             {1518}        		}
-    { Source                    {port1 port2}  		}
-	{ Destination    			{RF1}           	}
-	{ Direction      			{Unidirectional}	}
-    { TrafficType               Udp        			}
-    { SearchResolution          0.2%     			}
-    { MinSearchValue            1%       			}
-    { MaxSearchValue            150%     			}
-    { Mode                      Percent  			}
-    { StartValue                10%      			}
-    { AcceptableThroughput      0        			}
-    { FlowType                  UDP      			}
-    { PayloadData   			None   				}
-    { DestinationPort  			46002  				}
-    { SourcePort       			45001  				}
-	{ TrialDuration				5   				}
+    { Frame                     Custom               }
+    { FrameSizeList             {1518}               }
+    { Source                    {port1 port2}        }
+    { Destination                {RF1}               }
+    { Direction                  {Unidirectional}    }
+    { TrafficType               Udp                  }
+    { SearchResolution          0.2%                 }
+    { MinSearchValue            1%                   }
+    { MaxSearchValue            150%                 }
+    { Mode                      Percent              }
+    { StartValue                10%                  }
+    { AcceptableThroughput      0                    }
+    { FlowType                  UDP                  }
+    { PayloadData               None                 }
+    { DestinationPort           46002                }
+    { SourcePort                45001                }
+    { TrialDuration             5                    }
 }
 
 set 5g-lan-udp-dn-25c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom   			}
-    { FrameSizeList             {1518}       		}
-    { Source           			{port2}        		}
-    { Destination      			{RF25}           	}
-    { Direction        			{Unidirectional}	}
-    { TrafficType      			Udp             	}
-    { SearchResolution          0.2%    			}
-    { MinSearchValue            1%      			}
-    { MaxSearchValue            150%    			}
-    { Mode                      Percent 			}
-    { StartValue                10%     			}
-    { AcceptableThroughput      0       			}
-    { FlowType                  UDP     			}
-    { DestinationPort  			46002           	}
-    { SourcePort                45001               }
-	{ TrialDuration				5           		}
+    { Frame                     Custom               }
+    { FrameSizeList             {1518}               }
+    { Source                    {port2}              }
+    { Destination               {RF25}               }
+    { Direction                 {Unidirectional}     }
+    { TrafficType               Udp                  }
+    { SearchResolution          0.2%                 }
+    { MinSearchValue            1%                   }
+    { MaxSearchValue            150%                 }
+    { Mode                      Percent              }
+    { StartValue                10%                  }
+    { AcceptableThroughput      0                    }
+    { FlowType                  UDP                  }
+    { DestinationPort           46002                }
+    { SourcePort                45001                }
+    { TrialDuration             5                    }
 }
 
 set 5g-lan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom      		}
-    { FrameSizeList             {1518}  			}
-    { Source                    {RF1}             	}
-    { Destination               {port1 port2} 		}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
+    { Source                    {RF1}               }
+    { Destination               {port1 port2}       }
     { Direction                 {Unidirectional}    }
     { TrafficType               Udp                 }
-    { SearchResolution          0.2%    			}
-    { MinSearchValue            1%      			}
-    { MaxSearchValue            150%    			}
-    { Mode                      Percent 			}
-    { StartValue                10%     			}
-    { AcceptableThroughput      0       			}
-    { FlowType                  UDP     			}
-    { PayloadData               None   				}
-    { DestinationPort           46002  				}
-    { SourcePort                45001  				}
-	{ TrialDuration		      	5   				}
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-lan-udp-up-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom              }
     { FrameSizeList             {1518}              }
-    { Source                    {RF25}             	}
-    { Destination     			{port2}             }
-    { Direction                 {Unidirectional}   	}
-    { TrafficType               Udp                	}
-    { SearchResolution          0.2%    			}
-    { MinSearchValue            1%      			}
-    { MaxSearchValue            150%    			}
-    { Mode                      Percent 			}
-    { StartValue                10%     			}
-    { AcceptableThroughput      0       			}
-    { FlowType                  UDP      			}
+    { Source                    {RF25}              }
+    { Destination               {port2}             }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
     { PayloadData               None                }
     { DestinationPort           46002               }
     { SourcePort                45001               }
-	{ TrialDuration		     	5   				}
+    { TrialDuration             5                   }
 }
 
 set 5g-lan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom              }
-    { FrameSizeList             {1518} 				}
-    { Source                    {RF1-NoHiperf}  	}
-    { Destination               {port1 port2}      	}
-    { SearchResolution          0.2%    			}
-    { MinSearchValue            1%      			}
-    { MaxSearchValue            150%    			}
-    { Mode                      Percent 			}
-    { StartValue                10%     			}
-    { AcceptableThroughput      0       			}
-    { FlowType                  UDP     			}
-    { PayloadData               None   				}
-    { DestinationPort           46002   			}
-    { SourcePort                45001   			}
-	{ TrialDuration		     	5   				}
+    { FrameSizeList             {1518}              }
+    { Source                    {RF1-NoHiperf}      }
+    { Destination               {port1 port2}       }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-lan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom              }
-    { FrameSizeList             {1518}				}
+    { FrameSizeList             {1518}              }
     { Source                    {RF25-NoHiperf}     }
-    { Destination 				{port2} 			}
-    { Direction                 {Bidirectional}    	}
-    { TrafficType               Udp                	}
-    { SearchResolution          0.2%    			}
-    { MinSearchValue            1%      			}
-    { MaxSearchValue            150%    			}
-    { Mode                      Percent 			}
-    { StartValue                10%     			}
-    { AcceptableThroughput      0       			}
-    { FlowType                  UDP     			}
-    { PayloadData               None   				}
-    { DestinationPort           46002  				}
-    { SourcePort                45001  				}
-	{ TrialDuration		      	5   				}
+    { Destination                 {port2}           }
+    { Direction                 {Bidirectional}     }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-dn-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom              }
-    { FrameSizeList             {1518}  			}
-    { Source                    {port1-wan}     	}
-    { Destination               {RF1-BehindNAT}    	}
-    { Direction                 {Unidirectional}   	}
-    { TrafficType               Udp                	}
-    { SearchResolution          0.2%      			}
-    { MinSearchValue            1%        			}
-    { MaxSearchValue            150%      			}
-    { Mode                      Percent   			}
-    { StartValue                10%       			}
-    { AcceptableThroughput      0         			}
-    { FlowType                  UDP       			}
-    { PayloadData               None   				}
-    { DestinationPort           46002   			}
-    { SourcePort                45001   			}
-	{ TrialDuration		     	5   				}
+    { FrameSizeList             {1518}              }
+    { Source                    {port1-wan}         }
+    { Destination               {RF1-BehindNAT}     }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-dn-25c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom        		}
-    { FrameSizeList             {1518}  			}
-    { Source                    {port1-wan}    		}
-    { Destination               {RF25-BehindNAT}   	}
-    { Direction                 {Unidirectional}   	}
-    { TrafficType               Udp                	}
-    { SearchResolution          0.2%      			}
-    { MinSearchValue            1%        			}
-    { MaxSearchValue            150%     			}
-    { Mode                      Percent   			}
-    { StartValue                10%       			}
-    { AcceptableThroughput      0        			}
-    { FlowType                  UDP       			}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
+    { Source                    {port1-wan}         }
+    { Destination               {RF25-BehindNAT}    }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
     { DestinationPort           46002               }
     { SourcePort                45001               }
-	{ TrialDuration		      	5   				}
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                              }
-    { FrameSizeList             {1518}  				}
-    { Source                    {RF1-BehindNAT}         }
-    { Destination               {port1-wan}      		}
-    { Direction                 {Unidirectional}    	}
-    { TrafficType               Udp                 	}
-    { SearchResolution          0.2%     				}
-    { MinSearchValue            1%       				}
-    { MaxSearchValue            150%     				}
-    { Mode                      Percent  				}
-    { StartValue                10%      				}
-    { AcceptableThroughput      0        				}
-    { FlowType                  UDP      				}
-    { PayloadData               None                	}
-    { DestinationPort           46002                	}
-    { SourcePort                45001                	}
-	{ TrialDuration		      	5   					}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
+    { Source                    {RF1-BehindNAT}     }
+    { Destination               {port1-wan}         }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-up-25c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom                 	}
-    { FrameSizeList             {1518} 					}
-    { Source                    {RF25-BehindNAT}    	}
-    { Destination               {port1-wan}         	}
-    { Direction                 {Unidirectional}    	}
-    { TrafficType               Udp                 	}
-    { SearchResolution          0.2%     				}
-    { MinSearchValue            1%       				}
-    { MaxSearchValue            150%     				}
-    { Mode                      Percent  				}
-    { StartValue                10%      				}
-    { AcceptableThroughput      0        				}
-    { FlowType                  UDP      				}
-    { PayloadData               None                	}
-    { DestinationPort           46002                	}
-    { SourcePort                45001                	}
-	{ TrialDuration		     	5   				 	}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
+    { Source                    {RF25-BehindNAT}    }
+    { Destination               {port1-wan}         }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom   				}
-    { FrameSizeList             {1518}  				}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
     { Source                    {RF1-NoHiperf-BehindNAT} }
-    { Destination               {port1-wan}             }
-    { Direction                 {Bidirectional}    		}
-    { TrafficType               Udp                		}
-    { SearchResolution          0.2%     				}
-    { MinSearchValue            1%       				}
-    { MaxSearchValue            150%     				}
-    { Mode                      Percent  				}
-    { StartValue                10%      				}
-    { AcceptableThroughput      0        				}
-    { FlowType                  UDP      				}
-    { PayloadData               None    				}
-    { DestinationPort           46002    				}
-    { SourcePort                45001    				}
-	{ TrialDuration		      	5   					}
+    { Destination               {port1-wan}         }
+    { Direction                 {Bidirectional}     }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None}
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-wan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
-    { Frame                     Custom        			}
-    { FrameSizeList             {1518}					}
+    { Frame                     Custom              }
+    { FrameSizeList             {1518}              }
     { Source                    {RF25-NoHiperf-BehindNAT} }
-    { Destination               {port1-wan}             }
-    { Direction                 {Bidirectional}    		}
-    { TrafficType               Udp                 	}
-    { SearchResolution          0.2%     				}
-    { MinSearchValue            1%       				}
-    { MaxSearchValue            150%     				}
-    { Mode                      Percent  				}
-    { StartValue                10%      				}
-    { AcceptableThroughput      0        				}
-    { FlowType                  UDP      				}
-    { PayloadData               None                	}
-    { DestinationPort           46002                	}
-    { SourcePort                45001                	}
-	{ TrialDuration		      	5   					}
+    { Destination               {port1-wan}         }
+    { Direction                 {Bidirectional}     }
+    { TrafficType               Udp                 }
+    { SearchResolution          0.2%                }
+    { MinSearchValue            1%                  }
+    { MaxSearchValue            150%                }
+    { Mode                      Percent             }
+    { StartValue                10%                 }
+    { AcceptableThroughput      0                   }
+    { FlowType                  UDP                 }
+    { PayloadData               None                }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 # ================
@@ -742,17 +742,17 @@ set 5g-lan-tcp-dn-1c {
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
-    { FlowType                  TCP                 }
-	{ TrialDuration				5			  		}
-	{ NumOfSessionPerClient     1                   }
+    { DestinationPort           46002               }
+    { SourcePort                45001               }
+    { TrialDuration             5                   }
 }
 
 set 5g-lan-tcp-dn-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
-    { TcpWindowSize             2097152    	        }
+    { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {port2}         	}
+    { Source                    {port2}             }
     { Destination               {RF25}              }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -760,8 +760,8 @@ set 5g-lan-tcp-dn-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5 			 		}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 5g-lan-tcp-up-1c {
@@ -769,7 +769,7 @@ set 5g-lan-tcp-up-1c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {RF1}				}
+    { Source                    {RF1}               }
     { Destination               {port1 port2}       }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -777,8 +777,8 @@ set 5g-lan-tcp-up-1c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5				  	}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 5g-lan-tcp-up-25c {
@@ -786,7 +786,7 @@ set 5g-lan-tcp-up-25c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {RF25} 				}
+    { Source                    {RF25}              }
     { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -794,8 +794,8 @@ set 5g-lan-tcp-up-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5				  	}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 5g-lan-tcp-bidir-1c {
@@ -803,7 +803,7 @@ set 5g-lan-tcp-bidir-1c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {RF1-NoHiperf}  	}
+    { Source                    {RF1-NoHiperf}      }
     { Destination               {port1 port2}       }
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
@@ -811,8 +811,8 @@ set 5g-lan-tcp-bidir-1c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5			  		}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 
@@ -821,7 +821,7 @@ set 5g-lan-tcp-bidir-25c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {RF25-NoHiperf}		}
+    { Source                    {RF25-NoHiperf}     }
     { Destination               {port2}             }
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
@@ -829,8 +829,8 @@ set 5g-lan-tcp-bidir-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 
@@ -841,7 +841,7 @@ set 5g-wan-tcp-dn-1c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {port1-wan}   	    }
+    { Source                    {port1-wan}         }
     { Destination               {RF1-BehindNAT}     }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -849,8 +849,8 @@ set 5g-wan-tcp-dn-1c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5				  	}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 
@@ -859,7 +859,7 @@ set 5g-wan-tcp-dn-25c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
-    { Source                    {port1-wan}   	    }
+    { Source                    {port1-wan}         }
     { Destination               {RF25-BehindNAT}    }
     { Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
@@ -867,8 +867,8 @@ set 5g-wan-tcp-dn-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 5g-wan-tcp-up-1c {
@@ -877,14 +877,14 @@ set 5g-wan-tcp-up-1c {
     { TcpWindowSize             2097152             }
     { AcceptableGoodput         0                   }
     { Source                    {RF1-BehindNAT}     }
-    { Destination               {port1-wan}			}
+    { Destination               {port1-wan}         }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5				  	}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 set 5g-wan-tcp-up-25c {
@@ -900,51 +900,45 @@ set 5g-wan-tcp-up-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-	{ TrialDuration				5  					}
-	{ NumOfSessionPerClient     {1 2 5 10}          }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
 }
 
 
-
-
 set 5g-wan-tcp-bidir-1c {
-    { Test                      tcp_goodput        		  	}
-    { FrameSizeList             {1460}          			}
-    { TcpWindowSize             2097152            			}
-    { AcceptableGoodput         0                   		}
-    { Source                    {port1-wan}   	    		}
-    { Destination               {RF1-NoHiperf-BehindNAT}  	}
-    { Direction                 {Bidirectional}     		}
-    { TrafficType               Tcp                 		}
-    { PayloadData               None                		}
-    { DestinationPort           1024                		}
-    { SourcePort                1024                		}
-    { FlowType                  TCP                 		}
-	{ TrialDuration				5				  			}
-	{ NumOfSessionPerClient     {1 2 5 10}          		}
+    { Test                      tcp_goodput                 }
+    { FrameSizeList             {1460}                      }
+    { TcpWindowSize             2097152                     }
+    { AcceptableGoodput         0                           }
+    { Source                    {port1-wan}                 }
+    { Destination               {RF1-NoHiperf-BehindNAT}    }
+    { Direction                 {Bidirectional}             }
+    { TrafficType               Tcp                         }
+    { PayloadData               None                        }
+    { DestinationPort           1024                        }
+    { SourcePort                1024                        }
+    { FlowType                  TCP                         }
+    { TrialDuration          5                              }
+    { NumOfSessionPerClient     {1 2 5 10}                  }
 }
 
 
 set 5g-wan-tcp-bidir-25c {
-    { Test                      tcp_goodput         		}
-    { FrameSizeList             {1460}              		}
-    { TcpWindowSize             2097152             		}
-    { AcceptableGoodput         0                   		}
-    { Source                    {port1-wan}   	    		}
-    { Destination               {RF25-NoHiperf-BehindNAT} 	}
-    { Direction                 {Bidirectional}     		}
-    { TrafficType               Tcp                 		}
-    { PayloadData               None                		}
-    { DestinationPort           1024                		}
-    { SourcePort                1024                		}
-    { FlowType                  TCP                 		}
-	{ TrialDuration				5				  			}
-	{ NumOfSessionPerClient     {1 2 5 10}         			}
+    { Test                      tcp_goodput                 }
+    { FrameSizeList             {1460}                      }
+    { TcpWindowSize             2097152                     }
+    { AcceptableGoodput         0                           }
+    { Source                    {port1-wan}                 }
+    { Destination               {RF25-NoHiperf-BehindNAT}   }
+    { Direction                 {Bidirectional}             }
+    { TrafficType               Tcp                         }
+    { PayloadData               None                        }
+    { DestinationPort           1024                        }
+    { SourcePort                1024                        }
+    { FlowType                  TCP                         }
+    { TrialDuration             5                           }
+    { NumOfSessionPerClient     {1 2 5 10}                  }
 }
-
-
-
-
 
 #Port list for port specific options
 keylset global_config Ports {GWS-AP5 GWS-AP5-NoHiperf Eth2 Eth1}
