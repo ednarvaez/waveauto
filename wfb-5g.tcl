@@ -219,7 +219,7 @@ set RF1-NoHiperf {
     { USManagementMcs           11                  }
     { NumClients                1                   }
     { BehindNAT                 False               }
-
+}
 
 # ===
 
@@ -366,6 +366,7 @@ set wfb-5g-lan-udp-up-1c {
     { DestinationPort              46002                               }
     { SourcePort                   45001                               }
     { TrialDuration                5                                   }
+}
 
 set wfb-5g-lan-udp-up-25c {
     { Test                         unicast_unidirectional_throughput   }
