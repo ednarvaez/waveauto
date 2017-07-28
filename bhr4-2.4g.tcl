@@ -227,28 +227,33 @@ set RF1-BehindNAT {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  False               }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False                        }
-    { EnableMuSuMimo                   False                         }
-    { MimoMode                             mu-mimo                       }
-    { USManagementMcs                 11                            }
-    { NumClients                1                               }{ DataMcsIndex              23                  }{ ChannelBandwidth          40                  }{ NumTxAntennas             4                   }{ BehindNAT                         True                         }
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
+    { DataMcsIndex              23                  }
+    { ChannelBandwidth          40                  }
+    { NumTxAntennas             4                   }
+    { BehindNAT                 True                }
 }
 
 set RF1-NoHiperf {
-    { GroupType                 802.11ac                  }
-    { Ssid                      $ssid                    }
-    { Dut                       GWS-AP24-NoHiperf     }
-    { Method                    WPA2-PSK                }
-    { Channel                   $ch                         }
-    { PskAscii                  $psk                      }
-    { GuardInterval             short                        }
-    { ChannelModel              Bypass                      }{ TxPower                   6                            }
-    { GratuitousArp             True                         }
-    { Dhcp                      Disable                      }
-    { BaseIp                    192.168.1.12            }
-    { IncrIp                    0.0.0.1                      }
-    { SubnetMask                255.255.255.0            }
-    { Gateway                   192.168.1.1                }
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP24-NoHiperf   }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { GuardInterval             short               }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
@@ -261,33 +266,33 @@ set RF1-NoHiperf {
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  False               }
     { EnableValidateCertificate off                 }
-    { DuplicateControlFrames    False                        }
-    { EnableMuSuMimo                   False                        }
-    { MimoMode                             mu-mimo                      }
-    { USManagementMcs                 11                             }
-    { NumClients                1                              }
+    { DuplicateControlFrames    False               }
+    { EnableMuSuMimo            False               }
+    { MimoMode                  mu-mimo             }
+    { USManagementMcs           11                  }
+    { NumClients                1                   }
     { DataMcsIndex              23                  }
     { ChannelBandwidth          40                  }
     { NumTxAntennas             4                   }
-    { BehindNAT                         False                         }
+    { BehindNAT                 False               }
 }
 
 set RF1-NoHiperf-BehindNAT {
-    { GroupType                 802.11ac                  }
-    { Ssid                      $ssid                     }
-    { Dut                       GWS-AP24-NoHiperf         }
-    { Method                    WPA2-PSK                 }
-    { Channel                   $ch                         }
-    { PskAscii                  $psk                      }
-    { GuardInterval             short                        }
-    { ChannelModel              Bypass                      }
-    { TxPower                   6                            }
-    { GratuitousArp             True                        }
-    { Dhcp                      Disable                      }
-    { BaseIp                    192.168.1.12            }
-    { IncrIp                    0.0.0.1                      }
-    { SubnetMask                255.255.255.0            }
-    { Gateway                   192.168.1.1                 }
+    { GroupType                 802.11ac            }
+    { Ssid                      $ssid               }
+    { Dut                       GWS-AP24-NoHiperf   }
+    { Method                    WPA2-PSK            }
+    { Channel                   $ch                 }
+    { PskAscii                  $psk                }
+    { GuardInterval             short               }
+    { ChannelModel              Bypass              }
+    { TxPower                   6                   }
+    { GratuitousArp             True                }
+    { Dhcp                      Disable             }
+    { BaseIp                    192.168.1.12        }
+    { IncrIp                    0.0.0.1             }
+    { SubnetMask                255.255.255.0       }
+    { Gateway                   192.168.1.1         }
     { KeepAlive                 True                }
     { phyInterface              802.11n             }
     { NumSpatialStreams         4                   }
@@ -321,7 +326,7 @@ set RF25 {
     { PskAscii                  $psk                }
     { GuardInterval             short               }
     { ChannelModel              Bypass              }
-      { TxPower                   6                 }
+    { TxPower                   6                   }
     { GratuitousArp             True                }
     { Dhcp                      Disable             }
     { BaseIp                    192.168.1.12        }
@@ -374,7 +379,7 @@ set RF25-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  False               }
@@ -413,7 +418,7 @@ set RF25-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  False               }
@@ -452,7 +457,7 @@ set RF25-NoHiperf-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  False               }
@@ -642,11 +647,11 @@ set 24g-wan-udp-dn-25c {
 set 24g-wan-udp-up-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
-    { FrameSizeList             {1518}                         }
-    { Source                    {RF1-BehindNAT}                        }
-    { Destination               {port1-wan}                      }
-    { Direction                 {Unidirectional}                    }
-    { TrafficType               Udp                                 }
+    { FrameSizeList             {1518}                      }
+    { Source                    {RF1-BehindNAT}             }
+    { Destination               {port1-wan}                 }
+    { Direction                 {Unidirectional}            }
+    { TrafficType               Udp                         }
     { SearchResolution          0.2%                        }
     { MinSearchValue            1%                          }
     { MaxSearchValue            150%                        }
@@ -728,27 +733,26 @@ set 24g-wan-udp-bidir-25c {
 # {536 1460}
 
 set 24g-lan-tcp-dn-1c {
-    { Test                      tcp_goodput                 }
-    { FrameSizeList             {536 1460}                  }
-    { TcpWindowSize             2097152                     }
-    { AcceptableGoodput         0                           }
-    { Source                    {port2}                     }
-    { Destination               {RF1}                       }
-    { Direction                 {Unidirectional}            }
-    { TrafficType               Tcp                         }
-    { PayloadData               None                        }
-    { DestinationPort           1024                        }
-    { SourcePort                1024                        }
-    { FlowType                  TCP                         }
-    { TrialDuration             5                           }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { Test                      tcp_goodput         }
+    { FrameSizeList             {536 1460}          }
+    { TcpWindowSize             2097152             }
+    { Source                    {port2}             }
+    { Destination               {RF1}               }
+    { Direction                 {Unidirectional}    }
+    { TrafficType               Tcp                 }
+    { PayloadData               None                }
+    { DestinationPort           1024                }
+    { SourcePort                1024                }
+    { FlowType                  TCP                 }
+    { TrialDuration             5                   }
+    { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-lan-tcp-dn-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {port2}             }
     { Destination               {RF25}              }
     { Direction                 {Unidirectional}    }
@@ -759,13 +763,14 @@ set 24g-lan-tcp-dn-25c {
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
+
 }
 
 set 24g-lan-tcp-up-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {RF1}               }
     { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
@@ -783,7 +788,6 @@ set 24g-lan-tcp-up-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {RF25}              }
     { Destination               {port2}             }
     { Direction                 {Unidirectional}    }
@@ -794,13 +798,13 @@ set 24g-lan-tcp-up-25c {
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-lan-tcp-bidir-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {port2}             }
     { Destination               {RF1-NoHiperf}      }
     { Direction                 {Bidirectional}     }
@@ -819,7 +823,6 @@ set 24g-lan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {RF25-NoHiperf}     }
     { Destination               {port2}             }
     { Direction                 {Bidirectional}     }
@@ -830,6 +833,7 @@ set 24g-lan-tcp-bidir-25c {
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 
@@ -839,7 +843,6 @@ set 24g-wan-tcp-dn-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {port1-wan}         }
     { Destination               {RF1-BehindNAT}     }
     { Direction                 {Unidirectional}    }
@@ -850,13 +853,13 @@ set 24g-wan-tcp-dn-1c {
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-wan-tcp-dn-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {port1-wan}         }
     { Destination               {RF25-BehindNAT}    }
     { Direction                 {Unidirectional}    }
@@ -866,13 +869,13 @@ set 24g-wan-tcp-dn-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-wan-tcp-up-1c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {RF1-BehindNAT}     }
     { Destination               {port1-wan}         }
     { Direction                 {Unidirectional}    }
@@ -883,13 +886,13 @@ set 24g-wan-tcp-up-1c {
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-wan-tcp-up-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { AcceptableGoodput         0                   }
     { Source                    {RF25-BehindNAT}    }
     { Destination               {port1-wan}         }
     { Direction                 {Unidirectional}    }
@@ -899,13 +902,13 @@ set 24g-wan-tcp-up-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { NumOfSessionPerClient     {1 2 5 10}          }
+    { AcceptableGoodput         0                   }
 }
 
 set 24g-wan-tcp-bidir-1c {
     { Test                      tcp_goodput                 }
     { FrameSizeList             {536 1460}                  }
     { TcpWindowSize             2097152                     }
-    { AcceptableGoodput         0                           }
     { Source                    {RF1-NoHiperf-BehindNAT}    }
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
@@ -916,6 +919,7 @@ set 24g-wan-tcp-bidir-1c {
     { FlowType                  TCP                         }
     { TrialDuration             5                           }
     { NumOfSessionPerClient     {1 2 5 10}                  }
+    { AcceptableGoodput         0                           }
 }
 
 
@@ -923,7 +927,6 @@ set 24g-wan-tcp-bidir-25c {
     { Test                      tcp_goodput                 }
     { FrameSizeList             {536 1460}                  }
     { TcpWindowSize             2097152                     }
-    { AcceptableGoodput         0                           }
     { Source                    {RF25-NoHiperf-BehindNAT}   }
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
@@ -933,6 +936,7 @@ set 24g-wan-tcp-bidir-25c {
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
     { NumOfSessionPerClient     {1 2 5 10}                  }
+    { AcceptableGoodput         0                           }
 }
 
 
