@@ -188,7 +188,7 @@ set RF1 {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -227,7 +227,7 @@ set RF1-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -266,7 +266,7 @@ set RF1-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -305,7 +305,7 @@ set RF1-NoHiperf-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -345,7 +345,7 @@ set RF25 {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -384,7 +384,7 @@ set RF25-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -423,7 +423,7 @@ set RF25-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -462,7 +462,7 @@ set RF25-NoHiperf-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
