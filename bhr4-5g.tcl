@@ -147,10 +147,10 @@ set RF1 {
     { Method                    WPA2-PSK            }
     { Channel                   $ch                 }
     { PskAscii                  $psk                }
-    { VhtDataMcs                 9                  }
+    { VhtDataMcs                9                   }
     { USDataMcs                 9                   }
     { GuardInterval             short               }
-    { SigBandwidth                 80               }
+    { SigBandwidth              80                  }
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
