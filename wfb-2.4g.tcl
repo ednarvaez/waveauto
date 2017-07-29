@@ -240,7 +240,7 @@ set RF25 {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -278,7 +278,7 @@ set RF25-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         vht_mixed           }
+    { PlcpConfiguration         mixed               }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
