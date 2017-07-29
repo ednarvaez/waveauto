@@ -202,6 +202,10 @@ set RF1 {
 set RF1-BehindNAT {
     { GroupType                 802.11ac           }
     { Ssid                      $ssid              }
+	{ Dut                       GWS-AP24           }
+    { Method                    WPA2-PSK           }
+    { Channel                   $ch                }
+    { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
     { TxPower                   6                  }
