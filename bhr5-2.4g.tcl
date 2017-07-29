@@ -165,7 +165,7 @@ set RF1 {
     { Ssid                      $ssid              }
     { Dut                       GWS-AP24           }
     { Method                    WPA2-PSK           }
-    { Channel                   $ch                }
+    { Channel                   {$ch}              }
     { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
@@ -204,7 +204,7 @@ set RF1-BehindNAT {
     { Ssid                      $ssid              }
 	{ Dut                       GWS-AP24           }
     { Method                    WPA2-PSK           }
-    { Channel                   $ch                }
+    { Channel                   {$ch               }
     { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
@@ -238,7 +238,7 @@ set RF1-NoHiperf {
     { Ssid                      $ssid              }
     { Dut                       GWS-AP24-NoHiperf  }
     { Method                    WPA2-PSK           }
-    { Channel                   $ch                }
+    { Channel                   {$ch}              }
     { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
@@ -277,7 +277,7 @@ set RF1-NoHiperf-BehindNAT {
     { Ssid                      $ssid              }
     { Dut                       GWS-AP24-NoHiperf  }
     { Method                    WPA2-PSK           }
-    { Channel                   $ch                }
+    { Channel                   {$ch}              }
     { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
@@ -317,7 +317,7 @@ set RF25 {
     { Ssid                      $ssid               }
     { Dut                       GWS-AP24            }
     { Method                    WPA2-PSK            }
-    { Channel                   $ch                 }
+    { Channel                   {$ch}               }
     { PskAscii                  $psk                }
     { GuardInterval             short               }
     { ChannelModel              Bypass              }
@@ -356,7 +356,7 @@ set RF25-BehindNAT {
     { Ssid                      $ssid               }
     { Dut                       GWS-AP24            }
     { Method                    WPA2-PSK            }
-    { Channel                   $ch                 }
+    { Channel                   {$ch}               }
     { PskAscii                  $psk                }
     { GuardInterval             short               }
     { ChannelModel              Bypass              }
@@ -395,7 +395,7 @@ set RF25-NoHiperf {
     { Ssid                      $ssid               }
     { Dut                       GWS-AP24-NoHiperf   }
     { Method                    WPA2-PSK            }
-    { Channel                   $ch                 }
+    { Channel                   {$ch}               }
     { PskAscii                  $psk                }
     { GuardInterval             short               }
     { ChannelModel              Bypass              }
@@ -434,7 +434,7 @@ set RF25-NoHiperf-BehindNAT {
     { Ssid                      $ssid               }
     { Dut                       GWS-AP24-NoHiperf   }
     { Method                    WPA2-PSK            }
-    { Channel                   $ch                 }
+    { Channel                   {$ch}               }
     { PskAscii                  $psk                }
     { GuardInterval             short               }
     { ChannelModel              Bypass              }
