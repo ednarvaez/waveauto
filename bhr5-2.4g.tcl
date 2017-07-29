@@ -507,6 +507,7 @@ set 24g-lan-udp-dn-25c {
     { StartValue                10%                         }
     { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
+	{ PayloadData               None                        }
     { DestinationPort           46002                       }
     { SourcePort                45001                       }
     { TrialDuration             5                           }
@@ -634,6 +635,7 @@ set 24g-wan-udp-dn-25c {
     { StartValue                10%                         }
     { AcceptableThroughput      0                           }
     { FlowType                  UDP                         }
+	{ PayloadData               None                        }
     { DestinationPort           46002                       }
     { SourcePort                45001                       }
     { TrialDuration             5                           }
