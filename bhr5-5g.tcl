@@ -3,7 +3,7 @@
 #At: 2017-03-15 22:04:06.001000
 keylset global_config ChassisName {10.88.1.100}
 
-set logs c:/edn/bhr5/results
+set logs c:/edn/waveauto/results
 set ch 149
 set ssid boobooboo
 set psk 12345678
@@ -172,7 +172,7 @@ set RF1 {
     { VhtDataMcs                9                   }
     { USDataMcs                 9                   }
     { GuardInterval             short               }
-    { SigBandwidth                  80              }
+    { SigBandwidth              80                  }
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
@@ -188,7 +188,7 @@ set RF1 {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -227,7 +227,7 @@ set RF1-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -266,7 +266,7 @@ set RF1-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -305,7 +305,7 @@ set RF1-NoHiperf-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -345,7 +345,7 @@ set RF25 {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -354,7 +354,7 @@ set RF25 {
     { EnableMuSuMimo            False               }
     { MimoMode                  mu-mimo             }
     { USManagementMcs           11                  }
-    { NumClients                1                   }
+    { NumClients                25                  }
     { BehindNAT                 False               }
 }
 
@@ -384,7 +384,7 @@ set RF25-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed           }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -393,7 +393,7 @@ set RF25-BehindNAT {
     { EnableMuSuMimo            False               }
     { MimoMode                  mu-mimo             }
     { USManagementMcs           11                  }
-    { NumClients                1                   }
+    { NumClients                25                  }
     { BehindNAT                 False               }
 }
 
@@ -423,7 +423,7 @@ set RF25-NoHiperf {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -432,14 +432,14 @@ set RF25-NoHiperf {
     { EnableMuSuMimo            False               }
     { MimoMode                  mu-mimo             }
     { USManagementMcs           11                  }
-    { NumClients                1                   }
+    { NumClients                25                  }
     { BehindNAT                 False               }
 }
 
 set RF25-NoHiperf-BehindNAT {
     { GroupType                 802.11ac            }
     { Ssid                      $ssid               }
-    { Dut                       GWS-AP5-Nohiperf    }
+    { Dut                       GWS-AP5-NoHiperf    }
     { Method                    WPA2-PSK            }
     { Channel                   $ch                 }
     { PskAscii                  $psk                }
@@ -462,7 +462,7 @@ set RF25-NoHiperf-BehindNAT {
     { MgmtPhyRate               24                  }
     { Qos                       Disable             }
     { MacAddress                None                }
-    { PlcpConfiguration         mixed               }
+    { PlcpConfiguration         vht_mixed       }
     { EnableAMSDUrxaggregation  True                }
     { EnableAMPDUaggregation    True                }
     { EnableAMSDUtxaggregation  True                }
@@ -471,7 +471,7 @@ set RF25-NoHiperf-BehindNAT {
     { EnableMuSuMimo            False               }
     { MimoMode                  mu-mimo             }
     { USManagementMcs           11                  }
-    { NumClients                1                   }
+    { NumClients                25                  }
     { BehindNAT                 False               }
 }
 
@@ -483,8 +483,8 @@ set 5g-lan-udp-dn-1c {
     { Frame                     Custom               }
     { FrameSizeList             {1518}               }
     { Source                    {port1 port2}        }
-    { Destination                {RF1}               }
-    { Direction                  {Unidirectional}    }
+    { Destination               {RF1}                }
+    { Direction                 {Unidirectional}     }
     { TrafficType               Udp                  }
     { SearchResolution          0.2%                 }
     { MinSearchValue            1%                   }
@@ -567,6 +567,8 @@ set 5g-lan-udp-bidir-1c {
     { FrameSizeList             {1518}              }
     { Source                    {RF1-NoHiperf}      }
     { Destination               {port1 port2}       }
+	{ Direction                 {Unidirectional}    }
+    { TrafficType               Udp                 }
     { SearchResolution          0.2%                }
     { MinSearchValue            1%                  }
     { MaxSearchValue            150%                }
@@ -585,7 +587,7 @@ set 5g-lan-udp-bidir-25c {
     { Frame                     Custom              }
     { FrameSizeList             {1518}              }
     { Source                    {RF25-NoHiperf}     }
-    { Destination                 {port2}           }
+    { Destination               {port2}             }
     { Direction                 {Bidirectional}     }
     { TrafficType               Udp                 }
     { SearchResolution          0.2%                }
@@ -761,7 +763,7 @@ set 5g-lan-tcp-dn-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 5g-lan-tcp-up-1c {
@@ -778,7 +780,7 @@ set 5g-lan-tcp-up-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 5g-lan-tcp-up-25c {
@@ -795,7 +797,7 @@ set 5g-lan-tcp-up-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 5g-lan-tcp-bidir-1c {
@@ -812,7 +814,7 @@ set 5g-lan-tcp-bidir-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 
@@ -830,7 +832,7 @@ set 5g-lan-tcp-bidir-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 
@@ -850,7 +852,7 @@ set 5g-wan-tcp-dn-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 
@@ -868,7 +870,7 @@ set 5g-wan-tcp-dn-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 5g-wan-tcp-up-1c {
@@ -878,13 +880,14 @@ set 5g-wan-tcp-up-1c {
     { AcceptableGoodput         0                   }
     { Source                    {RF1-BehindNAT}     }
     { Destination               {port1-wan}         }
+	{ Direction                 {Unidirectional}    }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 5g-wan-tcp-up-25c {
@@ -901,7 +904,7 @@ set 5g-wan-tcp-up-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 
@@ -918,8 +921,8 @@ set 5g-wan-tcp-bidir-1c {
     { DestinationPort           1024                        }
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
-    { TrialDuration          5                              }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { TrialDuration             5                           }
+    { NumOfSessionPerClient     1                  }
 }
 
 
@@ -937,7 +940,7 @@ set 5g-wan-tcp-bidir-25c {
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
     { TrialDuration             5                           }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { NumOfSessionPerClient     1                  }
 }
 
 #Port list for port specific options
@@ -954,7 +957,7 @@ keylset GWS-AP5 APModel None
 keylset GWS-AP5 Interface.802_11ac.BindStatus True
 keylset GWS-AP5 Interface.802_11ac.WavetestPort 10.88.1.100:3:1
 keylset GWS-AP5 Interface.802_11ac.ChannelBandwidth 20
-keylset GWS-AP5 Interface.802_11ac.HighPerformance on
+keylset GWS-AP5 Interface.802_11ac.HighPerformance off
 keylset GWS-AP5 Interface.802_11ac.InterfaceType 802.11ac
 keylset GWS-AP5 Interface.802_11ac.EnableRxAttenuation off
 keylset GWS-AP5 Interface.802_11ac.SecondaryChannelPlacement defer
