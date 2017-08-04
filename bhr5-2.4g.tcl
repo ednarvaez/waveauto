@@ -204,7 +204,7 @@ set RF1-BehindNAT {
     { Ssid                      $ssid              }
 	{ Dut                       GWS-AP24           }
     { Method                    WPA2-PSK           }
-    { Channel                   {$ch               }
+    { Channel                   {$ch}              }
     { PskAscii                  $psk               }
     { GuardInterval             short              }
     { ChannelModel              Bypass             }
@@ -743,7 +743,7 @@ set 24g-lan-tcp-dn-1c {
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
     { TrialDuration             5                           }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { NumOfSessionPerClient     1                  }
 }
 
 set 24g-lan-tcp-dn-25c {
@@ -760,7 +760,7 @@ set 24g-lan-tcp-dn-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-lan-tcp-up-1c {
@@ -777,7 +777,7 @@ set 24g-lan-tcp-up-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
     { AcceptableGoodput         0                   }
 }
 
@@ -795,7 +795,7 @@ set 24g-lan-tcp-up-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-lan-tcp-bidir-1c {
@@ -812,7 +812,7 @@ set 24g-lan-tcp-bidir-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
     { AcceptableGoodput         0                   }
 }
 
@@ -831,7 +831,7 @@ set 24g-lan-tcp-bidir-25c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 
@@ -851,7 +851,7 @@ set 24g-wan-tcp-dn-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-wan-tcp-dn-25c {
@@ -867,7 +867,7 @@ set 24g-wan-tcp-dn-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-wan-tcp-up-1c {
@@ -884,7 +884,7 @@ set 24g-wan-tcp-up-1c {
     { SourcePort                1024                }
     { FlowType                  TCP                 }
     { TrialDuration             5                   }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-wan-tcp-up-25c {
@@ -900,7 +900,7 @@ set 24g-wan-tcp-up-25c {
     { DestinationPort           1024                }
     { SourcePort                1024                }
     { FlowType                  TCP                 }
-    { NumOfSessionPerClient     {1 2 5 10}          }
+    { NumOfSessionPerClient     1                   }
 }
 
 set 24g-wan-tcp-bidir-1c {
@@ -917,7 +917,7 @@ set 24g-wan-tcp-bidir-1c {
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
     { TrialDuration             5                           }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { NumOfSessionPerClient     1                  }
 }
 
 
@@ -934,7 +934,7 @@ set 24g-wan-tcp-bidir-25c {
     { DestinationPort           1024                        }
     { SourcePort                1024                        }
     { FlowType                  TCP                         }
-    { NumOfSessionPerClient     {1 2 5 10}                  }
+    { NumOfSessionPerClient     1                  }
 }
 
 

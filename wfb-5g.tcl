@@ -69,6 +69,12 @@ keylset global_config TestList {
     wfb-5g-wan-udp-up-25c
     wfb-5g-wan-udp-bidir-1c
     wfb-5g-wan-udp-bidir-25c
+	wfb-5g-wan-tcp-bidir-1c-1s  
+	wfb-5g-wan-tcp-bidir-25c-1s
+	wfb-5g-wan-tcp-dn-1c-1s 
+	wfb-5g-wan-tcp-dn-25c-1s 
+	wfb-5g-wan-tcp-up-1c-1s 
+	wfb-5g-wan-tcp-up-25c-1s
 
 }
 
