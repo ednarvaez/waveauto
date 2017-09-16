@@ -68,7 +68,9 @@ keylset global_config TestList {
     5g-wan-tcp-up-1c
     5g-wan-tcp-up-25c
     5g-wan-tcp-bidir-1c
+	5g-wan-tcp-bidir-1c-rev
     5g-wan-tcp-bidir-25c
+	d
 
 }
 
@@ -176,7 +178,7 @@ set RF1 {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable             }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -215,7 +217,7 @@ set RF1-BehindNAT {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -254,7 +256,7 @@ set RF1-NoHiperf {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -293,7 +295,7 @@ set RF1-NoHiperf-BehindNAT {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -333,7 +335,7 @@ set RF25 {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -372,7 +374,7 @@ set RF25-BehindNAT {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -411,7 +413,7 @@ set RF25-NoHiperf {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -450,7 +452,7 @@ set RF25-NoHiperf-BehindNAT {
     { ChannelModel              Bypass              }
     { TxPower                   6                   }
     { GratuitousArp             True                }
-    { Dhcp                      Disable             }
+    { Dhcp                      Enable              }
     { BaseIp                    192.168.1.12        }
     { IncrIp                    0.0.0.1             }
     { SubnetMask                255.255.255.0       }
@@ -915,6 +917,24 @@ set 5g-wan-tcp-bidir-1c {
     { AcceptableGoodput         0                           }
     { Source                    {port1-wan}                 }
     { Destination               {RF1-BehindNAT}    			}
+    { Direction                 {Bidirectional}             }
+    { TrafficType               Tcp                         }
+    { PayloadData               None                        }
+    { DestinationPort           1024                        }
+    { SourcePort                1024                        }
+    { FlowType                  TCP                         }
+    { TrialDuration             5                           }
+    { NumOfSessionPerClient     1                  }
+}
+
+
+set 5g-wan-tcp-bidir-1c-rev {
+    { Test                      tcp_goodput                 }
+    { FrameSizeList             {1460}                      }
+    { TcpWindowSize             2097152                     }
+    { AcceptableGoodput         0                           }
+    { Source                    {RF1-BehindNAT}                 }
+    { Destination               {port1-wan}    			}
     { Direction                 {Bidirectional}             }
     { TrafficType               Tcp                         }
     { PayloadData               None                        }
