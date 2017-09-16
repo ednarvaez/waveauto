@@ -563,7 +563,7 @@ set 24g-lan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                      }
-    { Source                    {RF1-NoHiperf}              }
+    { Source                    {RF1}              			}
     { Destination               {port2}                     }
     { Direction                 {Bidirectional}             }
     { TrafficType               Udp                         }
@@ -584,7 +584,7 @@ set 24g-lan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                      }
-    { Source                    {RF25-NoHiperf}             }
+    { Source                    {RF25}             			}
     { Destination               {port2}                     }
     { Direction                 {Bidirectional}             }
     { TrafficType               Udp                         }
@@ -690,7 +690,7 @@ set 24g-wan-udp-bidir-1c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                      }
-    { Source                    {RF1-NoHiperf-BehindNAT}    }
+    { Source                    {RF1-BehindNAT}    			}
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
     { TrafficType               Udp                         }
@@ -711,7 +711,7 @@ set 24g-wan-udp-bidir-25c {
     { Test                      unicast_unidirectional_throughput   }
     { Frame                     Custom                      }
     { FrameSizeList             {1518}                      }
-    { Source                    {RF25-NoHiperf-BehindNAT}   }
+    { Source                    {RF25-BehindNAT}   			}
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
     { TrafficType               Udp                         }
@@ -806,7 +806,7 @@ set 24g-lan-tcp-bidir-1c {
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
     { Source                    {port2}             }
-    { Destination               {RF1-NoHiperf}      }
+    { Destination               {RF1}      			}
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
     { PayloadData               None                }
@@ -823,7 +823,7 @@ set 24g-lan-tcp-bidir-25c {
     { Test                      tcp_goodput         }
     { FrameSizeList             {536 1460}          }
     { TcpWindowSize             2097152             }
-    { Source                    {RF25-NoHiperf}     }
+    { Source                    {RF25}     			}
     { Destination               {port2}             }
     { Direction                 {Bidirectional}     }
     { TrafficType               Tcp                 }
@@ -909,7 +909,7 @@ set 24g-wan-tcp-bidir-1c {
     { Test                      tcp_goodput                 }
     { FrameSizeList             {536 1460}                  }
     { TcpWindowSize             2097152                     }
-    { Source                    {RF1-NoHiperf-BehindNAT}    }
+    { Source                    {RF1-BehindNAT}    			}
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
     { TrafficType               Tcp                         }
@@ -927,7 +927,7 @@ set 24g-wan-tcp-bidir-25c {
     { Test                      tcp_goodput                 }
     { FrameSizeList             {536 1460}                  }
     { TcpWindowSize             2097152                     }
-    { Source                    {RF25-NoHiperf-BehindNAT}   }
+    { Source                    {RF25-BehindNAT}   			}
     { Destination               {port1-wan}                 }
     { Direction                 {Bidirectional}             }
     { TrafficType               Tcp                         }
@@ -956,7 +956,7 @@ keylset GWS-AP24 WLANSwitchSWVersion None
 keylset GWS-AP24 APSWVersion None
 keylset GWS-AP24 APModel None
 keylset GWS-AP24 Interface.802_11ac.BindStatus True
-keylset GWS-AP24 Interface.802_11ac.WavetestPort 10.88.1.100:3:1
+keylset GWS-AP24 Interface.802_11ac.WavetestPort 10.88.1.100:5:1
 keylset GWS-AP24 Interface.802_11ac.ChannelBandwidth 20
 keylset GWS-AP24 Interface.802_11ac.HighPerformance on
 keylset GWS-AP24 Interface.802_11ac.InterfaceType 802.11ac
@@ -978,7 +978,7 @@ keylset GWS-AP24-NoHiperf WLANSwitchSWVersion None
 keylset GWS-AP24-NoHiperf APSWVersion None
 keylset GWS-AP24-NoHiperf APModel None
 keylset GWS-AP24-NoHiperf Interface.802_11ac.BindStatus True
-keylset GWS-AP24-NoHiperf Interface.802_11ac.WavetestPort 10.88.1.100:3:1
+keylset GWS-AP24-NoHiperf Interface.802_11ac.WavetestPort 10.88.1.100:5:1
 keylset GWS-AP24-NoHiperf Interface.802_11ac.ChannelBandwidth 20
 keylset GWS-AP24-NoHiperf Interface.802_11ac.HighPerformance off
 keylset GWS-AP24-NoHiperf Interface.802_11ac.InterfaceType 802.11ac
